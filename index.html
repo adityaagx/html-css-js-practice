@@ -1,10 +1,49 @@
-Html stands for Hypertext Makrup lanuage
-It gives structure to webpage
+Html stands for Hypertext Makrup lanuage.
+It gives structure to webpage.
 It has two important things - Tags and Attributes
 Tags are special keywords enclosed by angle brackets (< >) that are used to structure and format content on a web page. 
 They are the building blocks of an HTML document, guiding the web browser on how to display text, images, and other media to the user. 
-Most important tags are - <!DOCTYPE> <html> <head> <body> <h1> <p> <a> <img> <div> <span> <section> <header> <footer> <nav> <ul> <li> <form> <input> <button>
+Most important tags are - <!DOCTYPE> <html> <head> <body> <meta> <title> <h1> <p> <a> <img> <div> <span> <section> <header> <footer> <nav> <ol> <ul> <li> <input> <button>
 Attributes are special words used in the opening tag of html element which describe or modify the behaviour and appearance of html elements
 They always come in name=value pairs using the syntax name="value"
 Some important attributes - <id class src href alt type name value target>
 Html element consists of opening tag content and closing tag. It is the builduing block of a webpage.
+
+Example html file - 
+  <!DOCTYPE>
+  <html>
+    <head>
+      <meta charset="UTF-8">
+      <title>Html practice file</title>
+      <style>
+        h1 = {
+          color: red;
+          text-align: center;
+         } </style>
+    </head>
+    <body>
+      <header>This is a header.</header>
+      <nav>
+         <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/contact">Contact</a></li>
+         </ul>
+      </nav>
+      <div>
+        <hi>This is heading one.</hi>
+        <p>This is a a paragaraph tag.</p>
+      </div>
+      <span>
+      <a href="github.com"> This is Github link</a>
+      <img src="dodo.jpg" alt="dodo image style="width=150">
+      </span>
+      <button type="button">Click me!</button>
+      <form action="/submit_page.php" method="POST">
+         <label for="username">Username:</label>
+         <input type="text" id="username" name="username">
+         <input type="submit" value="Submit">
+      </form>
+      <footer>This is a footer.</footer>
+    </body>
+  </html>
