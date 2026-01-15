@@ -1,0 +1,51 @@
+Css stands for Cascading Style sheets.
+It gives design to your website.
+Css has three main parts - Selector, property, value
+Selector is what you style. Eg- <div> <p> .class
+Property is the thing you want to change in an element, like text font or background color.
+Important properties are color font-size, font-family, width, height, padding, margin, border, box-sizing, flexbox, background-color, border-radius, box-shadow
+Value is how much to change
+Classes are most commonly used in Css.
+
+Example-
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans serif;
+  color: #333;
+  line-height: 1.6;
+}
+
+header {
+  background-color: #111;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+}
+
+footer {
+  text-align: center;
+  padding: 15px;
+  background-color: #111;
+  color: white;
+  margin-top: 40px;
+}
