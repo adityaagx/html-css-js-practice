@@ -1,0 +1,47 @@
+/* 
+CSS PRACTICE TASKS
+
+1. Make the whole page use a clean font and a light background color.
+
+2. Style the main heading:
+   - Change its text color
+   - Make its font size bigger than normal text
+
+3. Add spacing so content does not touch the browser edges.
+
+4. Create a content box:
+   - White background
+   - Space inside the box
+   - Should not take full page width
+   - Give a border color to it.
+   - Give a max width to it.
+
+5. Center the content box horizontally on the page.
+*/
+
+body {
+    font-family: sans-serif;
+    background-color: rgb(202, 247, 232);
+    padding: 50px;
+}
+
+h2 { 
+    color: blue;
+    font-size: 200%;
+}
+
+div {
+    background-color: white;
+    padding: 20px;
+    margin: 50px;
+    max-width: 500px;
+    display: flex;
+    justify-content: center;
+    border: 2px solid black;
+}
+
+.intro{
+   margin-left: auto;
+   margin-right: auto;
+   flex-direction: column;
+}
