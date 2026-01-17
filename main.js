@@ -21,6 +21,10 @@ Await - pauses execution until a Promise resolves
 Promise - represents a value that will be available in the future
 Map - creates a new array by transforming each item
 Filter - creates a new array with only matching items
+DOM - Document Object Model is a tree-like structure created by the browser that represents HTML elements and allows JavaScript
+	  to manipulate the webpage dynamically.It lets JavaScript talk to HTML and change the page dynamically.
+Events - Events are actions performed by the user or browser that JavaScript can listen to and respond to.
+
 Examples - 
 Variables - 
 	let, const,
@@ -65,6 +69,13 @@ Map -
 	const numbers = [1, 2, 3, 4, 5];
 	const doubled = numbers.map(num => num * 2);
     console.log(doubled);
+DOM -
+	let body = document.querySelector("body")
+    body.innertext = "Hello world"
+
+Event - 
+	button.addEventListener("click", sayHello);
+
 Filter -
 	const evenNumbers = numbers.filter(num => num % 2 === 0);
     console.log(evenNumbers);
