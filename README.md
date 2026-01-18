@@ -44,8 +44,9 @@ This repository focuses on **learning by doing**, not just watching tutorials.
 
 ## 🛠 How This Repo Is Organized
 
-- PRactice for html and css is done in practice.html and practice.css
-- Each practice project is practiced in **separate files** for Javascript
+- Theory and examples are written in index.html, style.css, main.js
+- Practice tasks are done in practice.html, practice.css, practice.js
+- For proper projects of html css and js a different repo is created.
 - Code is written clearly and simply for easy understanding
 - Focus is on **clarity over complexity**
 - No frameworks used — only **vanilla HTML, CSS, and JavaScript**
