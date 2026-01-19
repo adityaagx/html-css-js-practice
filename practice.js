@@ -67,3 +67,54 @@ let user = {
 }
 console.log(user)
 
+/* TASK 1:
+Create a variable temperature.
+If temperature is greater than 30, print "Hot".
+If between 15 and 30, print "Normal".
+Else print "Cold". */
+
+let temperature = 20;
+
+if (temperature > 30){
+    console.log("Hot")
+}
+if(15<temperature<30){
+    console.log("Normal")
+}
+else {
+    console.log("Cold")
+}
+
+/* TASK 2:
+Create a function square that takes a number
+and returns its square. Print the result. */
+
+let n = 3;
+function square(n){
+    return n * n
+}
+console.log(square(n))
+
+/* TASK 3:
+Create an array of numbers.
+Calculate and print the total sum of all numbers using a loop. */
+
+let array = [1,2,3,4,5,]
+for(i=0; i<array.length; i++){
+    console.log(i)
+}
+
+/* TASK 4:
+Create a function findLargest that takes two numbers
+and prints the larger one. */
+
+/* TASK 5:
+Create an array of names.
+Use a loop to print only names that have more than 4 characters. */
+
+/* TASK 6:
+Create an object called car with properties:
+brand, model, year.
+Print a sentence using the object values. */
+
+
