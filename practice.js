@@ -103,7 +103,7 @@ let array = [1,2,3,4,5];
 let total = 0;
 
 for(let i=0; i<array.length; i++){
-    total = total + numbers[i];
+    total = total + array[i];
 }
 console.log(total);
 
@@ -231,4 +231,131 @@ if (student.marks > 50){
     console.log("Passed");
 } else {
     console.log("Failed")
+} 
+
+/* TASK 1:
+Create a variable time.
+If time is between 6 and 11, print "Morning".
+If between 12 and 17, print "Afternoon".
+If between 18 and 21, print "Evening".
+Else print "Night". */
+
+let time = 13;
+
+if(time >= 6 && time <= 11){
+    console.log("Morning")
+} else if (time >= 12 && time <= 17){
+    console.log("Afternoon")
+} else if (time >= 18 && time <= 21){
+    console.log("Evening")
+} else {console.log("Night")};
+
+/* TASK 2:
+Create a function calculateSum that takes an array of numbers
+and returns the total sum. Print the result. */
+
+function calculateSum(arr){
+    let sum = 0
+    for(i=0; i<arr.length; i++){
+        sum = sum + arr[i]
+    } return sum;
 }
+let arraySum = [1, 3, 5, 8];
+console.log(calculateSum(arraySum))
+
+/* TASK 3:
+Create an array of prices.
+Use a loop to calculate the average price. */
+
+let num = [1, 2, 3, 4, 5]
+
+function calculateSum(arr){
+   let sum = 0;
+   for (let i = 0; i < arr.length; i++) {
+      sum = sum + arr[i];
+   }
+
+   return sum/arr.length
+}
+
+console.log(calculateSum(num));
+
+/* TASK 4:
+Create a function findSmallest that takes an array
+and prints the smallest number in it. */
+
+function findSmallest(arr){
+    let num = [arr[0]]
+    for(i=1; i<arr.length; i++){
+        if(num > arr[i]){
+            num = arr[i]
+        }
+    } return num
+}
+
+let numbz = [2,4,1,5]
+console.log(findSmallest(numbz));
+
+/* TASK 5:
+Create an array of usernames.
+Print only usernames whose length is less than 6. */
+
+let username = ["adity", "rameshh", "mohit", "abhiudai"];
+
+for(i=0; i<username.length; i++){
+    if(username[i].length < 6){
+        console.log(username[i])
+    }
+}
+
+/* TASK 6:
+Create an object called order with:
+itemName, quantity, pricePerItem.
+Calculate and print the total price of the order. */
+
+let order = {
+    itemName : "Apple",
+    Quantity : 7,
+    pricePerItem : 50
+}
+function totalPrice(a, b){
+    return a * b
+}
+console.log(totalPrice(order.Quantity, order.pricePerItem));
+
+/* TASK 1:
+Create an array of numbers.
+Use a loop to print only the EVEN numbers. */
+
+let arrayNum = [1, 2, 4, 5, 7]
+
+for(i=0; i<arrayNum.length; i++){
+    if(arrayNum[i] % 2 === 0){
+        console.log(arrayNum[i])
+    }
+}
+
+/* TASK 2:
+Create an array of numbers.
+Use a loop to count how many numbers are GREATER than 10.
+Print the count. */
+
+let arrays = [1, 56, 77, 3]
+let count = 0;
+for(i=0; i<arrays.length; i++){
+    if(arrays[i]>10){
+        count++;
+    }
+} console.log(count);
+
+/* TASK 3:
+Create an array of numbers.
+Use a loop to calculate the TOTAL sum.
+Print the sum. */
+
+let arrayNumb = [1, 3, 5, 6];
+let sum = 0
+for (i=0; i<arrayNumb.length; i++){
+    sum = sum + arrayNumb[i];
+}
+console.log(sum);
