@@ -462,3 +462,114 @@ console.log(
     "Negative" + negative,
     "Zero" + zero
 )
+
+/* ===============================
+   DOM PRACTICE TASKS – ONE FILE
+   LEVEL 1 (BASICS)
+================================ */
+
+/* TASK 1:
+Select the h1 element by its id
+and change its text to "DOM is fun". */
+
+let h1 = document.querySelector("h1");
+h1.innerText = "DOM is fun";
+
+/* TASK 2:
+Select a paragraph using querySelector
+and change its text color to blue. */
+
+let p = document.querySelector("p");
+p.style.color = "blue";
+
+/* TASK 3:
+Select a button by its id.
+When the button is clicked,
+change the background color of the body. */
+
+let btn = document.querySelector("button");
+
+btn.addEventListener("click", function (){
+    document.body.style.backgroundColor = "green";
+});
+
+/* TASK 4:
+Select an input field.
+When the user types something,
+print the value in the console. */
+
+let input = document.querySelector("input");
+
+input.addEventListener("input", function () {
+    console.log(input.value);
+});
+
+/* TASK 5:
+Create a new paragraph element using JavaScript.
+Set its text to "I was added using JS".
+Add it inside the body. */
+
+let newPara = document.createElement("p");
+
+newPara.innerText = "I was added using JS";
+document.body.appendChild(newPara);
+
+/* TASK 6:
+Select all list items (li).
+Use a loop to change their text color to green. */
+
+let listItems = document.querySelectorAll("li");
+
+for(let i=0; i<listItems.length; i++){
+    listItems[i].style.color = "green";
+};
+
+/* TASK 7:
+Select a button.
+When clicked, add a class called "active"
+to a div element. */
+
+let box = document.querySelector("button");
+
+box.addEventListener("click", function(){
+    box.classList.add("active");
+});
+
+/* TASK 8:
+Select the same button.
+When clicked again, remove the "active" class
+from the div element. */
+
+box.addEventListener("dblclick", function(){
+    box.classList.remove("active");
+})
+
+/* TASK 9:
+Select a form.
+When the form is submitted,
+stop the page from refreshing
+and print "Form submitted" in the console. */
+
+let form = document.querySelector("form");
+form.addEventListener("submit", function(event){
+    event.preventDefault();
+    console.log("Form submitted");
+})
+
+/* TASK 10:
+Select a paragraph.
+When the mouse goes over it,
+change its text to "Mouse is here".
+When the mouse leaves,
+change it back to the original text. */
+
+let text = document.querySelector("p");
+let originalText = text.innerText;
+
+text.addEventListener("mouseover", function(){
+    text.innerText = "Mouse is here";
+});
+
+text.addEventListener("mouseout", function(){
+    text.innerText = originalText;
+})
