@@ -386,3 +386,79 @@ for(i=0; i<wordz.length; i++){
         longest = wordz[i]
     }
 } console.log(longest);
+
+/* TASK 1:
+Create an array of numbers.
+Use a loop to REVERSE the array manually.
+Print the reversed array.*/
+
+let Number = [1, 2, 3, 4, 5];
+let reversed = []
+
+for(i = Number.length-1; i>=0; i--){
+    reversed.push([Number[i]]);
+}  
+
+console.log(reversed);
+
+/* TASK 2:
+Create an array of numbers.
+Use a loop to remove duplicate values.
+Print the new array.
+(Hint: check if value already exists before pushing) */
+
+let nums = [1, 2, 3, 3, 2, 4, 5];
+let unique = []
+
+for(i=0; i<nums.length; i++){
+    if(!unique.includes(nums[i])){
+        unique.push(nums[i]);
+     }
+    }
+console.log(unique);
+
+/* TASK 3:
+Create an array of numbers.
+Use a loop to find the SECOND LARGEST number. */
+
+let numb = [1, 2, 3, 4, 5];
+let maxLargest = numb[0];
+let secondLargest = numb[0];
+
+for(let i = 0; i < numb.length; i++) {
+    if(numb[i] > maxLargest) {
+        secondLargest = maxLargest;
+        maxLargest = numb[i];
+    } else if(numb[i] > secondLargest && numb[i] !== maxLargest) {
+        secondLargest = numb[i];
+    }
+}
+
+console.log(secondLargest);
+
+/* TASK 4:
+Create an array of numbers.
+Use a loop to count how many POSITIVE, NEGATIVE,
+and ZERO values are present.
+Print all three counts. */
+
+let numz = [1, 5, -3, 0, -2, 4, -7];
+
+let positive = [];
+let negative = [];
+let zero = [];
+
+for(i=0; i<numz.length; i++){
+    if(numz[i]>0){
+        positive++;
+    } else if (numz[i]<0){
+        negative++;
+    } else {
+        zero++
+    }
+}
+console.log(
+    "Positive" + positive,
+    "Negative" + negative,
+    "Zero" + zero
+)

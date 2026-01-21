@@ -25,6 +25,7 @@ DOM - Document Object Model is a tree-like structure created by the browser that
 	  to manipulate the webpage dynamically.It lets JavaScript talk to HTML and change the page dynamically.
 Events - Events are actions performed by the user or browser that JavaScript can listen to and respond to.
 
+
 Examples - 
 Variables - 
 	let, const,
