@@ -359,3 +359,30 @@ for (i=0; i<arrayNumb.length; i++){
     sum = sum + arrayNumb[i];
 }
 console.log(sum);
+
+/* TASK 4:
+Create an array of numbers.
+Use a loop to find the SMALLEST number.
+Print it. */
+
+let Num = [2, 3, 1, 4];
+
+let smallest = Num[0];
+for(i=0; i<Num.length; i++){
+    if(Num[i]<smallest){
+        smallest = Num[i]
+    }
+} console.log(smallest);
+
+/* TASK 5:
+Create an array of words.
+Use a loop to print the word with the LONGEST length. */
+
+let wordz = ["aditya", "bhavya", "abhiudai", "ritesh"];
+
+let longest = wordz[0];
+for(i=0; i<wordz.length; i++){
+    if(wordz[0].length < wordz[i].length){
+        longest = wordz[i]
+    }
+} console.log(longest);
