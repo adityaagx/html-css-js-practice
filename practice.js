@@ -669,28 +669,55 @@ When the form is submitted,
 stop page refresh
 and print "Form submitted successfully".
 */
+{
+    let formsubmit = document.querySelector(".form-submit");
 
+    formsubmit.addEventListener("submit", function(event){
+        event.preventDefault();
+        console.log("Form submitted successfully");
+    })
+}
 /* TASK 8:
 Select an input and a paragraph.
 When the user types,
 show the input value live inside the paragraph.
 */
-
+{
+    let inputtype = document.querySelector(".input-type");
+    let p = document.querySelector(".paragraph");
+    
+    inputtype.addEventListener("input", function(){
+        p.innerText = input.value;
+    });
+}
 /* TASK 9:
 Select all buttons.
 When any button is clicked,
 print the text of the clicked button.
 */
+{
+  const buttons = document.querySelectorAll("button");
+
+  buttons.forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      console.log(btn.innerText);
+    });
+  });
+}
 
 /* TASK 10:
 Select a div.
 When the mouse moves over it,
 change its background color randomly.
 */
+{
+  const box = document.querySelector(".div");
 
-/* ===============================
-   BONUS (OPTIONAL)
-================================ */
+  box.addEventListener("mouseover", function () {
+    const randomColor = "#" + Math.floor(Math.random() * 16777215).toString(16);
+    box.style.backgroundColor = randomColor;
+  });
+}
 
 /* TASK 11:
 Create a button using JavaScript.
@@ -698,3 +725,13 @@ Add it to the page.
 When clicked,
 show an alert saying "Button created by JS".
 */
+{
+    let button = document.createElement("button");
+    button.innerText = "Click me";
+
+    document.body.appendChild("button");
+
+    button.addEventListener("click", function (){
+        alert("Button created by JS");
+    })
+}
