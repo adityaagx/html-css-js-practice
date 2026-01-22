@@ -573,3 +573,107 @@ text.addEventListener("mouseover", function(){
 text.addEventListener("mouseout", function(){
     text.innerText = originalText;
 })
+
+/* ===============================
+   EVENT LISTENER PRACTICE TASKS
+   LEVEL 1 – BASICS
+================================ */
+
+/* TASK 1:
+Select a button.
+When the button is clicked,
+print "Button clicked" in the console.
+*/
+
+let button = document.querySelector("button")
+
+button.addEventListener("click" , function(){
+    console.log("Button clicked");
+});
+
+/* TASK 2:
+Select a paragraph.
+When the mouse goes over it,
+change its text color to red.
+When the mouse leaves,
+change the color back to black.
+*/
+
+let p = document.querySelector("p");
+
+p.addEventListener("mouseover", function(){
+    p.style.color = "red";
+})
+p.addEventListener("mouseout", function(){
+    p.style.color = "black";
+})
+/* TASK 3:
+Select an input field.
+When the user types,
+print the current value in the console.
+*/
+
+let input = document.querySelector("input");
+
+input.addEventListener("input", function (){
+    console.log(input.value);
+});
+
+/* TASK 4:
+Select a button.
+When clicked,
+change the text of an h1 to "Hello DOM".
+*/
+
+/* TASK 5:
+Select a div.
+When the button is clicked,
+toggle a class called "active" on the div.
+*/
+
+/* ===============================
+   LEVEL 2 – LOGIC + EVENTS
+================================ */
+
+/* TASK 6:
+Select a button.
+Keep a count variable.
+Each time the button is clicked,
+increase the count and print it.
+*/
+
+/* TASK 7:
+Select a form.
+When the form is submitted,
+stop page refresh
+and print "Form submitted successfully".
+*/
+
+/* TASK 8:
+Select an input and a paragraph.
+When the user types,
+show the input value live inside the paragraph.
+*/
+
+/* TASK 9:
+Select all buttons.
+When any button is clicked,
+print the text of the clicked button.
+*/
+
+/* TASK 10:
+Select a div.
+When the mouse moves over it,
+change its background color randomly.
+*/
+
+/* ===============================
+   BONUS (OPTIONAL)
+================================ */
+
+/* TASK 11:
+Create a button using JavaScript.
+Add it to the page.
+When clicked,
+show an alert saying "Button created by JS".
+*/
