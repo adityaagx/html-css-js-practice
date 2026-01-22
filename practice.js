@@ -624,13 +624,27 @@ Select a button.
 When clicked,
 change the text of an h1 to "Hello DOM".
 */
+{
+let btn = document.querySelector("button");
+let h1 = document.querySelector("h1");
 
+btn.addEventListener("click", function(){
+    h1.innerText = "Hello DOM"
+});
+}
 /* TASK 5:
 Select a div.
 When the button is clicked,
 toggle a class called "active" on the div.
 */
+{
+let div = document.querySelector("div");
+let btn = document.querySelector("button");
 
+btn.addEventListener("click", function(){
+    div.classList.toggle("active");
+});
+}
 /* ===============================
    LEVEL 2 – LOGIC + EVENTS
 ================================ */
@@ -641,7 +655,14 @@ Keep a count variable.
 Each time the button is clicked,
 increase the count and print it.
 */
-
+{
+let btn = document.querySelector("button");
+let count = 0;
+btn.addEventListener("click", function (){
+    count++;
+    console.log(count);
+})
+}
 /* TASK 7:
 Select a form.
 When the form is submitted,
