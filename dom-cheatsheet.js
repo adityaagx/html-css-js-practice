@@ -24,9 +24,9 @@ document.getElementsByClassName("class");
 document.getElementsByTagName("p");
 
 // Modern selectors (recommended)
-document.querySelector("#id");     // tag
+document.querySelector("#id");     // id
 document.querySelector(".class");  // class
-document.querySelector("p");       // id
+document.querySelector("p");       // tag
 
 document.querySelectorAll(".class"); // multiple
 
