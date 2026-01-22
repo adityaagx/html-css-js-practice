@@ -735,3 +735,144 @@ show an alert saying "Button created by JS".
         alert("Button created by JS");
     })
 }
+
+/* =====================================
+   FUNCTIONS PRACTICE – LEVEL 1
+   Write your solution BELOW each task
+===================================== */
+
+/* TASK 1:
+Create a function named sayHello
+that prints "Hello World" to the console.
+Then call the function.
+*/
+
+{
+  function sayHello(){
+    console.log("Hello World");
+  }
+  sayHello();
+}
+
+/* TASK 2:
+Create a function named addNumbers
+that takes two parameters a and b,
+returns their sum,
+store the result in a variable,
+and print it.
+*/
+{
+    function addNumbers(a, b){
+        return a + b;    }
+
+    let sum = addNumbers(2, 5);
+    console.log(sum);
+}
+/* TASK 3:
+Create a function named greetUser
+that takes a name as parameter
+and returns "Hello, <name>".
+Print the returned value.
+*/
+{
+    function greetUser(name){
+        return ("Hello, " + name);
+    }
+    console.log(greetUser("Aditya"));
+}
+
+/* =====================================
+   FUNCTIONS AS VALUES – PRACTICE
+   7 TASKS
+   Paste this in one JS file in VS Code
+   Write your solution BELOW each task
+===================================== */
+
+/* TASK 1:
+Create a function named greet
+that returns "Hello!".
+Store this function in a variable called sayHelloFunc.
+Call sayHelloFunc and print the result.
+*/
+{
+    let sayHelloFunc = function greet(){
+        return "Hello!"
+    } 
+    console.log(sayHelloFunc());
+}
+
+/* TASK 2:
+Create a function named multiply
+that takes two numbers and returns their product.
+Store it in a variable called multiplyFunc.
+Call multiplyFunc with 3 and 4 and print the result.
+*/
+{
+    let multiplyFunc = function multiply(a, b){
+        return a * b;
+    }
+    console.log(multiplyFunc(3, 4));
+}
+
+/* TASK 3:
+Create a function named isEven
+that takes a number and returns true if it's even, false otherwise.
+Store it in a variable called checkEven.
+Call checkEven with 10 and print the result.
+*/
+{
+    let checkEven = function isEven(a){
+        if (a/2 == 0){
+            return "True"
+        } else {
+            return "False"
+        }
+    }
+    console.log(checkEven(10));
+}
+/* TASK 4:
+Write a function named shout
+that takes a string and returns it in uppercase.
+Store it in a variable called shoutFunc.
+Call shoutFunc with "hello world" and print the result.
+*/
+
+{
+    let shoutFunc = function shout(string){
+        return string.toUpperCase();
+    }
+    console.log(shoutFunc("hello world"));
+}
+
+/* TASK 5:
+Create a function named operate
+that takes three parameters: a, b, and operationFunc.
+- a and b are numbers
+- operationFunc is a function that performs an operation on a and b
+Return the result of calling operationFunc(a, b).
+Use this to add and multiply numbers.
+*/
+
+{
+    
+}
+
+
+/* TASK 6:
+Create a function named callTwice
+that takes a function as a parameter
+and calls it two times.
+Write a simple function named sayHi that prints "Hi!" and pass it to callTwice.
+*/
+
+// YOUR CODE HERE
+
+
+/* TASK 7:
+Create a function named callWithValue
+that takes a function and a value as parameters.
+It should call the function with the value and print the result.
+Example: pass a function that doubles a number and the value 5. It should print 10.
+*/
+
+// YOUR CODE HERE
