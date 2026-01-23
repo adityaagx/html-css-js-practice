@@ -822,7 +822,7 @@ Call checkEven with 10 and print the result.
 */
 {
     let checkEven = function isEven(a){
-        if (a/2 == 0){
+        if (a % 2 === 0){
             return "True"
         } else {
             return "False"
@@ -854,7 +854,18 @@ Use this to add and multiply numbers.
 */
 
 {
-    
+    function add(a, b){
+        return a + b;
+    }
+
+    function multiply(a, b){
+        return a * b;
+    }
+
+    function operate (a, b, operationFunc){
+        return operationFunc(a, b);
+    }
+    console.log(operate(4, 7, multiply))
 }
 
 
@@ -864,8 +875,11 @@ that takes a function as a parameter
 and calls it two times.
 Write a simple function named sayHi that prints "Hi!" and pass it to callTwice.
 */
-
-// YOUR CODE HERE
+{
+    function sayHi(){
+        console.log("Hi")
+    }
+}
 
 
 /* TASK 7:
@@ -875,4 +889,6 @@ It should call the function with the value and print the result.
 Example: pass a function that doubles a number and the value 5. It should print 10.
 */
 
-// YOUR CODE HERE
+{
+    function callwithValue()
+}
