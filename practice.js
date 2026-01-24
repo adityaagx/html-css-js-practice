@@ -907,3 +907,218 @@ Example: pass a function that doubles a number and the value 5. It should print 
 
     callWithValue(double, 5); // 10
 }
+
+/***********************
+ CALLBACK TASKS PRACTICE
+***********************/
+
+/* =====================
+TASK 1 (Beginner)
+Create a function named greet
+that takes a callback and calls it.
+Create another function sayHello
+that logs "Hello!".
+Pass sayHello to greet.
+===================== */
+{
+   function greet(callback){
+      return callback();
+   }
+   function sayHello(){
+    console.log("Hello!");
+   }
+   greet(sayHello);
+}   
+
+/* =====================
+TASK 2
+Create a function named process
+that accepts a callback.
+The callback should print "Processing done".
+===================== */
+{
+    function process(callback){
+        return callback();
+    }
+    
+    function done(){
+        return "Processing Done"
+    }
+
+    console.log(process(done));
+}
+
+
+/* =====================
+TASK 3
+Create a function named welcomeUser
+that takes a name and a callback.
+Inside welcomeUser, print "Welcome <name>"
+then call the callback.
+===================== */
+{
+    function welcomeUser(name, callback){
+        console.log("Welcome " + name);
+        callback();
+    }
+
+    function afterWelcome(){
+        console.log("Callback executed");
+    }
+
+    welcomeUser("Aditya", afterWelcome);
+}
+
+
+/* =====================
+TASK 4
+Create a function named calculate
+that takes two numbers and a callback.
+The callback should add the numbers.
+Print the result.
+===================== */
+{
+    // your code here
+}
+
+
+/* =====================
+TASK 5
+Same as Task 4, but this time
+use a callback to multiply the numbers.
+===================== */
+{
+    // your code here
+}
+
+
+/* =====================
+TASK 6 (Intermediate)
+Create a function named checkNumber
+that takes a number and two callbacks:
+- one if number is even
+- one if number is odd
+Call the correct callback.
+===================== */
+{
+    // your code here
+}
+
+
+/* =====================
+TASK 7
+Create a function named repeat
+that takes a callback and a number n.
+Call the callback n times.
+===================== */
+{
+    // your code here
+}
+
+
+/* =====================
+TASK 8
+Create a function named greetAfterDelay
+that takes a callback.
+Use setTimeout to call the callback
+after 2 seconds.
+===================== */
+{
+    // your code here
+}
+
+
+/* =====================
+TASK 9
+Create a function fetchData
+that simulates fetching data using setTimeout.
+After 1 second, call a callback
+with the message "Data received".
+===================== */
+{
+    // your code here
+}
+
+
+/* =====================
+TASK 10
+Create a function calculateSquare
+that takes a number and a callback.
+The callback should receive the square
+and print it.
+===================== */
+{
+    // your code here
+}
+
+
+/* =====================
+TASK 11 (Real-world style)
+Create a function loginUser
+that takes username, password, and a callback.
+If username === "admin", call callback with "Login successful".
+Else call callback with "Login failed".
+===================== */
+{
+    // your code here
+}
+
+
+/* =====================
+TASK 12
+Create a function downloadFile
+that uses setTimeout (3 seconds).
+After download, call a callback that logs
+"Download complete".
+===================== */
+{
+    // your code here
+}
+
+
+/* =====================
+TASK 13
+Create a function performOperation
+that takes a, b, and a callback.
+Use callback to subtract a and b.
+===================== */
+{
+    // your code here
+}
+
+
+/* =====================
+TASK 14 (Advanced thinking)
+Create a function stepOne(callback)
+that logs "Step 1 completed"
+then calls callback.
+
+Create stepTwo(callback)
+that logs "Step 2 completed"
+then calls callback.
+
+Call them in sequence using callbacks.
+===================== */
+{
+    // your code here
+}
+
+
+/* =====================
+TASK 15 (Callback Hell intro 😈)
+Create three functions:
+first(callback)
+second(callback)
+third()
+
+Each function should use setTimeout
+and print:
+"First done" → after 1 sec
+"Second done" → after 1 sec
+"Third done"
+
+Call them in order using callbacks.
+===================== */
+{
+    // your code here
+}
