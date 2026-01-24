@@ -24,10 +24,53 @@ Filter - creates a new array with only matching items
 DOM - Document Object Model is a tree-like structure created by the browser that represents HTML elements and allows JavaScript
 	  to manipulate the webpage dynamically.It lets JavaScript talk to HTML and change the page dynamically.
 Events - Events are actions performed by the user or browser that JavaScript can listen to and respond to.
-Properties in JS -
-String - length, indexOf(), lastIndexOf(), slice(), substring(), replace(), split(), trim(), toUpperCase(), toLowerCase(), etc.
-Numbers - explainParseFloat(value), explainParseInt(value).
-Arrays - push(), pop(), shift(), unshift(), splice(), slice(), concat(), forEach(), map(), filter(), reduce(), find(), sort()
+
+/************************************
+ JAVASCRIPT BUILT-IN OBJECTS CHEAT SHEET
+************************************/
+
+/* ===== DATE OBJECT ===== */
+Date();
+Date.now(); getFullYear(); getMonth(); getDate(); getDay(); getHours(); getMinutes(); getSeconds(); getMilliseconds();getTime(); setFullYear(); 
+setMonth(); setDate(); toDateString(); toTimeString(); toISOString();
+
+/* ===== MATH OBJECT ===== */
+Math.PI; Math.E; Math.round(); Math.floor(); Math.ceil(); Math.trunc(); Math.max(); Math.min(); Math.pow(); Math.sqrt(); Math.abs(); Math.random();
+
+/* ===== JSON OBJECT ===== */
+JSON.stringify(); JSON.parse();
+
+/* ===== OBJECT OBJECT ===== */
+Object.keys();Object.values();Object.entries();Object.assign();Object.freeze();Object.seal();Object.hasOwn();Object.create();
+
+/* ===== ARRAY OBJECT ===== */
+length;
+push(); pop(); shift(); unshift(); slice(); splice(); concat(); join(); indexOf(); includes(); map(); filter(); reduce(); forEach(); find(); findIndex();
+some(); every(); sort(); reverse();
+
+/* ===== STRING OBJECT ===== */
+length;
+toUpperCase(); toLowerCase(); trim(); trimStart(); trimEnd(); slice(); substring(); replace(); replaceAll(); split();
+includes(); startsWith(); endsWith(); indexOf();
+
+/* ===== NUMBER OBJECT ===== */
+toFixed(); toString(); Number(); parseInt(); parseFloat(); Number.isInteger(); Number.isNaN(); Number.MAX_VALUE; Number.MIN_VALUE;
+
+/* ===== BOOLEAN OBJECT ===== */
+Boolean();
+
+/* ===== FUNCTION OBJECT ===== */
+call(); apply(); bind();
+
+/* ===== TIMER / ASYNC ===== */
+setTimeout(); clearTimeout(); setInterval(); clearInterval();
+
+/* ===== PROMISE OBJECT ===== */
+Promise(); then(); catch(); finally(); Promise.resolve(); Promise.reject(); Promise.all(); Promise.race();
+
+/* ===== DOM / BROWSER ===== */
+document.querySelector(); document.querySelectorAll(); document.getElementById(); document.createElement(); appendChild(); remove(); 
+classList.add(); classList.remove(); classList.toggle(); addEventListener(); preventDefault();
 
 
 Examples - 
