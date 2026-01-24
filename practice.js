@@ -1154,9 +1154,21 @@ that uses setTimeout (3 seconds).
 After download, call a callback that logs
 "Download complete".
 ===================== */
+
 {
-    // your code here
+    function downloadFile(callback){
+        setTimeout(() => {
+            callback();
+        }, 3000);
+    }
+
+    function downloadComplete(){
+        console.log("Download complete");
+    }
+
+    downloadFile(downloadComplete);
 }
+
 
 
 /* =====================
@@ -1165,8 +1177,17 @@ Create a function performOperation
 that takes a, b, and a callback.
 Use callback to subtract a and b.
 ===================== */
+
 {
-    // your code here
+    function performOperation(a, b, callback){
+        callback(a, b);
+    }
+
+    function subtract(a, b){
+        console.log(a - b);
+    }
+
+    performOperation(7, 2, subtract);
 }
 
 
@@ -1182,8 +1203,23 @@ then calls callback.
 
 Call them in sequence using callbacks.
 ===================== */
+
 {
-    // your code here
+    function stepOne(callback){
+        console.log("Step 1 completed");
+        callback();
+    }
+
+    function stepTwo(callback){
+        console.log("Step 2 completed");
+        callback();
+    }
+
+    stepOne(() => {
+        stepTwo(() => {
+            console.log("All steps done");
+        });
+    });
 }
 
 
@@ -1202,6 +1238,32 @@ and print:
 
 Call them in order using callbacks.
 ===================== */
+/* TASK 15 */
 {
-    // your code here
+    function first(callback){
+        setTimeout(() => {
+            console.log("First done");
+            callback();
+        }, 1000);
+    }
+
+    function second(callback){
+        setTimeout(() => {
+            console.log("Second done");
+            callback();
+        }, 1000);
+    }
+
+    function third(){
+        setTimeout(() => {
+            console.log("Third done");
+        }, 1000);
+    }
+
+    first(() => {
+        second(() => {
+            third();
+        });
+    });
 }
+
