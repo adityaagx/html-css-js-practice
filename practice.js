@@ -978,7 +978,15 @@ The callback should add the numbers.
 Print the result.
 ===================== */
 {
-    // your code here
+    function calculateSum(a, b, callback){
+        callback(a, b);
+    }
+
+    function add(a, b){
+        console.log(a + b);
+    }
+
+    calculateSum(4, 7, add);
 }
 
 
@@ -988,7 +996,15 @@ Same as Task 4, but this time
 use a callback to multiply the numbers.
 ===================== */
 {
-    // your code here
+    function calculateMultiply(a, b, callback){
+        callback(a, b);
+    }
+
+    function multiply(a, b){
+        console.log(a * b);
+    }
+
+    calculateMultiply(4, 8, multiply);
 }
 
 
@@ -1001,7 +1017,22 @@ that takes a number and two callbacks:
 Call the correct callback.
 ===================== */
 {
-    // your code here
+    function checkNumber(num, cb1, cb2){
+        if(num % 2 === 0){
+            cb1();
+        }
+        else {
+            cb2();
+        }
+    }
+    function cb1(){
+        console.log("Even");
+    }
+    function cb2(){
+        console.log("Odd");
+    }
+    
+    checkNumber(5, cb1, cb2);
 }
 
 
@@ -1011,8 +1042,19 @@ Create a function named repeat
 that takes a callback and a number n.
 Call the callback n times.
 ===================== */
+
 {
-    // your code here
+    function repeat(callback, n){
+        for(let i = 0; i < n; i++){
+            callback();
+        }
+    }
+
+    function sayHi(){
+        console.log("Hi");
+    }
+
+    repeat(sayHi, 3);
 }
 
 
