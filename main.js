@@ -24,6 +24,10 @@ Filter - creates a new array with only matching items
 DOM - Document Object Model is a tree-like structure created by the browser that represents HTML elements and allows JavaScript
 	  to manipulate the webpage dynamically.It lets JavaScript talk to HTML and change the page dynamically.
 Events - Events are actions performed by the user or browser that JavaScript can listen to and respond to.
+Properties in JS -
+String - length, indexOf(), lastIndexOf(), slice(), substring(), replace(), split(), trim(), toUpperCase(), toLowerCase(), etc.
+Numbers - explainParseFloat(value), explainParseInt(value).
+Arrays - push(), pop(), shift(), unshift(), splice(), slice(), concat(), forEach(), map(), filter(), reduce(), find(), sort()
 
 
 Examples - 
