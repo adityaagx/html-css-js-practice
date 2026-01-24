@@ -875,12 +875,19 @@ that takes a function as a parameter
 and calls it two times.
 Write a simple function named sayHi that prints "Hi!" and pass it to callTwice.
 */
-{
-    function sayHi(){
-        console.log("Hi")
-    }
-}
 
+{
+    function callTwice(func) {
+        func();
+        func();
+    }
+
+    function sayHi() {
+        console.log("Hi!");
+    }
+
+    callTwice(sayHi);
+}
 
 /* TASK 7:
 Create a function named callWithValue
@@ -890,5 +897,13 @@ Example: pass a function that doubles a number and the value 5. It should print 
 */
 
 {
-    function callwithValue()
+    function callWithValue(func, value) {
+        console.log(func(value));
+    }
+
+    function double(num) {
+        return num * 2;
+    }
+
+    callWithValue(double, 5); // 10
 }
