@@ -1065,8 +1065,19 @@ that takes a callback.
 Use setTimeout to call the callback
 after 2 seconds.
 ===================== */
+
 {
-    // your code here
+    function greetAfterDelay(callback){
+        setTimeout(() => {
+            callback();
+        }, 2000);
+    }
+
+    function sayHello(){
+        console.log("Hello after delay");
+    }
+
+    greetAfterDelay(sayHello);
 }
 
 
@@ -1077,10 +1088,20 @@ that simulates fetching data using setTimeout.
 After 1 second, call a callback
 with the message "Data received".
 ===================== */
-{
-    // your code here
-}
 
+{
+    function fetchData(callback){
+        setTimeout(() => {
+            callback("Data received");
+        }, 1000);
+    }
+
+    function showData(message){
+        console.log(message);
+    }
+
+    fetchData(showData);
+}
 
 /* =====================
 TASK 10
@@ -1090,9 +1111,16 @@ The callback should receive the square
 and print it.
 ===================== */
 {
-    // your code here
-}
+    function calculateSquare(n, callback){
+        callback(n);
+    }
 
+    function square(n){
+        console.log(n * n);
+    }
+    
+    calculateSquare(4, square);
+}
 
 /* =====================
 TASK 11 (Real-world style)
@@ -1101,8 +1129,21 @@ that takes username, password, and a callback.
 If username === "admin", call callback with "Login successful".
 Else call callback with "Login failed".
 ===================== */
+
 {
-    // your code here
+    function loginUser(username, password, callback){
+        if (username === "admin"){
+            callback("Login successfull");
+        } else {
+            callback("Login failed");
+        }
+    }
+
+    function handleLogin(result){
+        console.log(result);
+    }
+
+    loginUser("admin", "123", handleLogin);
 }
 
 
