@@ -1157,19 +1157,15 @@ After download, call a callback that logs
 
 {
     function downloadFile(callback){
-        setTimeout(() => {
-            callback();
-        }, 3000);
+        settimeout(() => {callback()}, 3000);
     }
 
-    function downloadComplete(){
-        console.log("Download complete");
+    function success(){
+        console.log("download complete");
     }
 
-    downloadFile(downloadComplete);
+    downloadFile(success);
 }
-
-
 
 /* =====================
 TASK 13
@@ -1190,80 +1186,80 @@ Use callback to subtract a and b.
     performOperation(7, 2, subtract);
 }
 
-
-/* =====================
-TASK 14 (Advanced thinking)
-Create a function stepOne(callback)
-that logs "Step 1 completed"
-then calls callback.
-
-Create stepTwo(callback)
-that logs "Step 2 completed"
-then calls callback.
-
-Call them in sequence using callbacks.
-===================== */
-
+/* ==================================================
+TASK 1 (Beginner)
+Create a function named sayHiAfterDelay
+that uses setTimeout to print "Hi!" after 1 second.
+================================================== */
 {
-    function stepOne(callback){
-        console.log("Step 1 completed");
-        callback();
+    function sayHiAfterDelay(){
+        setTimeout(() => {console.log("Hi")}, 1000 );
     }
 
-    function stepTwo(callback){
-        console.log("Step 2 completed");
-        callback();
-    }
-
-    stepOne(() => {
-        stepTwo(() => {
-            console.log("All steps done");
-        });
-    });
+    sayHiAfterDelay();
 }
 
-
-/* =====================
-TASK 15 (Callback Hell intro 😈)
-Create three functions:
-first(callback)
-second(callback)
-third()
-
-Each function should use setTimeout
-and print:
-"First done" → after 1 sec
-"Second done" → after 1 sec
-"Third done"
-
-Call them in order using callbacks.
-===================== */
-/* TASK 15 */
+/* ==================================================
+TASK 2 (Beginner)
+Create a function greetUser
+that takes a name and a callback.
+Use setTimeout to wait 1 second,
+then print "Hello <name>" and call the callback.
+The callback should print "Greeting finished".
+================================================== */
 {
-    function first(callback){
+    function greetUser(name, callback){
         setTimeout(() => {
-            console.log("First done");
+            console.log("Hello " + name);
             callback();
         }, 1000);
+        
     }
 
-    function second(callback){
-        setTimeout(() => {
-            console.log("Second done");
-            callback();
-        }, 1000);
+    function success(){
+        console.log("Greeting Finished");
     }
 
-    function third(){
-        setTimeout(() => {
-            console.log("Third done");
-        }, 1000);
-    }
-
-    first(() => {
-        second(() => {
-            third();
-        });
-    });
+    greetUser("Aditya", success);
 }
 
+/* ==================================================
+TASK 3 (Intermediate)
+Create a function calculateSumAsync
+that takes two numbers and a callback.
+Use setTimeout (2 seconds),
+then send the sum to the callback.
+The callback should print the result.
+================================================== */
+{
+    function calculateSumAsync(a, b, callback){
+        setTimeout(() => {callback(a + b)}, 2000);
+    }
+
+    function sumResult(c){
+        console.log(c);
+    }
+
+    calculateSumAsync(4, 7, sumResult);
+}
+
+/* ==================================================
+TASK 4 (Intermediate – Real World Style)
+Create a function fetchUserData
+that simulates fetching data using setTimeout (2 seconds).
+After delay, call a callback with the object:
+{ name: "Aditya", age: 20 }
+
+Print the user data inside the callback.
+================================================== */
+{
+    function fetchUserData(callback){
+        setTimeout(() => {callback()}, 2000 )
+    }
+
+    function user(){
+        console.log("name: Aditya, age: 20" );
+    }
+
+    fetchUserData(user);
+}
