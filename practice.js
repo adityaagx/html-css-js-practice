@@ -1263,3 +1263,89 @@ Print the user data inside the callback.
 
     fetchUserData(user);
 }
+
+/* ==================================================
+PROMISE TASK 1 (Beginner)
+Create a promise that resolves after 1 second
+and prints "Promise resolved".
+================================================== */
+{
+    let promise = new Promise ((resolve, reject) => {
+        setTimeout(() => {
+            resolve("Promise resolved");
+        }, 1000);
+    })
+
+    promise.then((result) => {
+        console.log(result);
+    })
+}
+
+/* ==================================================
+PROMISE TASK 2 (Beginner)
+Create a promise that immediately resolves
+with the value "Hello Promise".
+Use .then() to print the value.
+================================================== */
+{
+    let promise = new Promise ((resolve) => {
+        resolve("Hello Promise");
+    })
+
+    .then((result) => {
+        console.log(result);
+    })
+}
+/* ==================================================
+PROMISE TASK 3 (Beginner)
+Create a promise that resolves after 2 seconds
+with the number 10.
+Use .then() to print the number.
+================================================== */
+{
+    let promise = new Promise((resolve) => {
+        setTimeout(() => {
+           resolve (10)
+        }, 2000);
+    })
+
+    .then((result) => {
+        console.log(result);
+    })
+}
+
+/* ==================================================
+PROMISE TASK 4 (Beginner)
+Create a promise that rejects
+with the message "Something went wrong".
+Use .catch() to print the error.
+================================================== */
+{
+    let promise = new Promise((resolve, reject) => {
+        reject("Something went wrong");
+    })
+
+    .catch((reject) => {
+        console.log(reject);
+    })
+}
+
+/* ==================================================
+PROMISE TASK 5 (Beginner – Real Feel)
+Create a function getData
+that returns a promise.
+The promise should resolve after 1 second
+with the string "Data loaded".
+Call the function and print the result.
+================================================== */
+function getData() {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            resolve("Data loaded");
+        }, 1000);
+    });
+}
+
+getData().then((data) => {
+    console.log(data);
+});
