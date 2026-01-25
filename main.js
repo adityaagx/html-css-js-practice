@@ -19,8 +19,6 @@ Javascript can context witch using async functions.
 Async - makes a function return a Promise
 Await - pauses execution until a Promise resolves
 Promise - represents a value that will be available in the future
-Map - creates a new array by transforming each item
-Filter - creates a new array with only matching items
 DOM - Document Object Model is a tree-like structure created by the browser that represents HTML elements and allows JavaScript
 	  to manipulate the webpage dynamically.It lets JavaScript talk to HTML and change the page dynamically.
 Events - Events are actions performed by the user or browser that JavaScript can listen to and respond to.
