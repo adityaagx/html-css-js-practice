@@ -1555,7 +1555,9 @@ TASK 1
 Print "Hello World" after 2 seconds.
 ================================================== */
 {
-
+  setTimeout(() => {
+    console.log("Hello world");
+  }, 2000);
 }
 
 /* ==================================================
@@ -1564,7 +1566,13 @@ Create a function that takes a name and
 prints "Welcome <name>" after 1 second.
 ================================================== */
 {
+   function greet(name){
+    setTimeout(() => {
+        console.log("Welcome " + name);
+    }, 1000);
+   }
 
+   greet("Aditya");
 }
 
 /* ==================================================
@@ -1573,7 +1581,13 @@ Create a function that takes two numbers
 and prints their sum after 1 second.
 ================================================== */
 {
+   function sum(a, b){
+    setTimeout(() => {
+        console.log(a + b);
+    }, 1000);
+   }
 
+   sum(4, 7);
 }
 
 /* ==================================================
@@ -1582,6 +1596,14 @@ Create a function that accepts another function
 and runs it after 1 second.
 ================================================== */
 {
+  function greet(){
+    return "Hello"
+  }
+
+  function name(){
+    return 
+  }
+
 
 }
 
@@ -1591,7 +1613,7 @@ Create a function that returns something
 that finishes after 1 second and prints "Done".
 ================================================== */
 {
-
+   function success()
 }
 
 /* ==================================================
@@ -1601,7 +1623,15 @@ is greater than 10 and fails otherwise.
 Print the result.
 ================================================== */
 {
+   function checkTen(num){
+    if(num > 10){
+        console.log("Success");
+    } else {
+        console.log("Fails");
+    }
+   }
 
+   checkTen(7);
 }
 
 /* ==================================================
