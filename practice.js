@@ -1596,16 +1596,19 @@ Create a function that accepts another function
 and runs it after 1 second.
 ================================================== */
 {
+  function runAfterDelay(callback){
+    setTimeout(() => {
+      callback();
+    }, 1000);
+  }
+
   function greet(){
-    return "Hello"
+    console.log("Hello");
   }
 
-  function name(){
-    return 
-  }
-
-
+  runAfterDelay(greet);
 }
+
 
 /* ==================================================
 TASK 5
@@ -1613,7 +1616,13 @@ Create a function that returns something
 that finishes after 1 second and prints "Done".
 ================================================== */
 {
-   function success()
+   function success(){
+    setTimeout(() => {
+        console.log ("Done")
+    }, 1000);
+   }
+
+   success();
 }
 
 /* ==================================================
