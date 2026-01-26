@@ -1349,3 +1349,131 @@ function getData() {
 getData().then((data) => {
     console.log(data);
 });
+
+/* ==================================================
+PROMISE TASK 6 (Beginner)
+Create a promise that resolves after 1 second
+with the message "Task 6 done".
+Print the message using .then().
+================================================== */
+{
+    let promise = new Promise((resolve) => {
+        setTimeout(() => {
+            resolve("Task 6 done");
+        }, 1000);
+    })
+
+    .then((resolve) => {
+        console.log(resolve);
+    })
+}
+
+/* ==================================================
+PROMISE TASK 7 (Beginner)
+Create a promise that rejects after 1 second
+with the message "Task 7 failed".
+Handle the error using .catch().
+================================================== */
+{
+    let promise = new Promise((resolve, reject) => {
+        setTimeout(() => {
+            reject("Task 7 failed");
+        }, 1000);
+    })
+
+    .catch((reject) => {
+        console.log(reject);
+    })
+}
+
+/* ==================================================
+PROMISE TASK 8 (Beginner – Function + Promise)
+Create a function named checkAge
+that returns a promise.
+If age >= 18, resolve with "Access granted".
+Else reject with "Access denied".
+
+Call the function with age 20
+and print the result.
+================================================== */
+{
+    function checkAge(age){
+        return new Promise((resolve, reject) => {
+            if(age >= 18){
+                resolve("Access granted");
+            } else{
+                reject("Access denied");
+            }
+        })
+    }
+
+    checkAge(20)
+    .then((resolve) => {
+        console.log(resolve);
+    })
+    .catch((reject) => {
+        console.log(reject);
+    })
+}
+
+/* ==================================================
+PROMISE CHAIN TASK 1 (Beginner)
+Create a function firstTask
+that returns a promise.
+After 1 second, resolve with "First task done".
+
+Call it and print the result using .then().
+================================================== */
+{
+    function firstTask(){
+        return new Promise
+    }
+}
+
+
+
+/* ==================================================
+PROMISE CHAIN TASK 2 (Beginner)
+Create two functions:
+
+stepOne → resolves after 1 sec with "Step One"
+stepTwo → resolves after 1 sec with "Step Two"
+
+Call stepOne, then stepTwo using chaining.
+Print both results.
+================================================== */
+{
+    // your code here
+}
+
+
+
+/* ==================================================
+PROMISE CHAIN TASK 3 (Beginner – Passing Data)
+Create a function addTen
+that takes a number and returns a promise.
+After 1 sec, resolve with number + 10.
+
+Call addTen(5),
+then addTen again with the result,
+then print final value.
+================================================== */
+{
+    // your code here
+}
+
+
+
+/* ==================================================
+PROMISE CHAIN TASK 4 (Beginner – Real Life Style)
+Create functions:
+
+loginUser → resolves with "User logged in"
+loadProfile → resolves with "Profile loaded"
+showDashboard → logs "Dashboard shown"
+
+Chain them properly.
+================================================== */
+{
+    // your code here
+}
