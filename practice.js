@@ -1426,11 +1426,17 @@ Call it and print the result using .then().
 ================================================== */
 {
     function firstTask(){
-        return new Promise
-    }
+        return new Promise((resolve, reject) => {
+          setTimeout(() => {
+            resolve("First Task done");
+          }, 1000);
+        }
+        )}
+
+    firstTask().then((resolve) => {
+        console.log(resolve);
+    })
 }
-
-
 
 /* ==================================================
 PROMISE CHAIN TASK 2 (Beginner)
@@ -1443,10 +1449,31 @@ Call stepOne, then stepTwo using chaining.
 Print both results.
 ================================================== */
 {
-    // your code here
+    function stepOne(){
+        return new Promise((resolve, reject) => {
+            setTimeout(() => {
+                resolve("Step One");
+            }, 1000);
+        })
+    }
+
+    function stepTwo(){
+        return new Promise((resolve, reject) => {
+            setTimeout(() => {
+                resolve("Step Two");
+            }, 1000);
+        })
+    }
+
+    stepOne().then((resolve) => {
+        console.log(resolve);
+        return stepTwo(result);
+    })
+
+    .then((finalResult) => {
+        console.log(finalResult);
+    })
 }
-
-
 
 /* ==================================================
 PROMISE CHAIN TASK 3 (Beginner – Passing Data)
@@ -1459,10 +1486,24 @@ then addTen again with the result,
 then print final value.
 ================================================== */
 {
-    // your code here
+    function addTen(number){
+        return new Promise((resolve, reject) => {
+            setTimeout(() => {
+                resolve(number + 10);
+            }, 1000);
+        } )
+    }
+
+    addTen(5)
+       .then((result1) => {
+        console.log(result1);
+        return addTen(result1);
+    })
+
+    .then((result2) => {
+        console.log(result2);
+    })
 }
-
-
 
 /* ==================================================
 PROMISE CHAIN TASK 4 (Beginner – Real Life Style)
@@ -1475,5 +1516,133 @@ showDashboard → logs "Dashboard shown"
 Chain them properly.
 ================================================== */
 {
-    // your code here
+    function loginUser(){
+        return new Promise((resolve, reject) => {
+            resolve("User logged in");
+        })
+    }
+
+    function loadProfile(){
+        return new Promise((resolve, reject) => {
+            resolve("Profile loaded");
+        })
+    }
+
+    function showDashboard(){
+        return new Promise((resolve, reject) => {
+            resolve("Dashboard shown");
+        })
+    }
+
+    loginUser()
+               .then((msg) => {
+                console.log(msg);
+                return loadProfile()
+               })
+               
+               .then((msg) => {
+                console.log(msg);
+                return showDashboard()
+               })
+
+               .then ((msg) => {
+                console.log(msg);
+               })
+}
+
+/* ==================================================
+TASK 1
+Print "Hello World" after 2 seconds.
+================================================== */
+{
+
+}
+
+/* ==================================================
+TASK 2
+Create a function that takes a name and
+prints "Welcome <name>" after 1 second.
+================================================== */
+{
+
+}
+
+/* ==================================================
+TASK 3
+Create a function that takes two numbers
+and prints their sum after 1 second.
+================================================== */
+{
+
+}
+
+/* ==================================================
+TASK 4
+Create a function that accepts another function
+and runs it after 1 second.
+================================================== */
+{
+
+}
+
+/* ==================================================
+TASK 5
+Create a function that returns something
+that finishes after 1 second and prints "Done".
+================================================== */
+{
+
+}
+
+/* ==================================================
+TASK 6
+Create a function that succeeds if a number
+is greater than 10 and fails otherwise.
+Print the result.
+================================================== */
+{
+
+}
+
+/* ==================================================
+TASK 7
+Create two steps that run one after the other
+and print:
+"Step 1 complete"
+"Step 2 complete"
+================================================== */
+{
+
+}
+
+/* ==================================================
+TASK 8
+Create a fake data loader that returns
+an object with name and age after 2 seconds
+and prints it.
+================================================== */
+{
+
+}
+
+/* ==================================================
+TASK 9
+Create a flow:
+Start → Check → Finish
+Each step should run one after another
+and print its name.
+================================================== */
+{
+
+}
+
+/* ==================================================
+TASK 10 (Challenge)
+Create a login flow:
+- Check username
+- If correct, load profile
+- Finally print "Dashboard ready"
+================================================== */
+{
+
 }
