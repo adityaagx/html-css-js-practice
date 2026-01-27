@@ -1596,19 +1596,18 @@ Create a function that accepts another function
 and runs it after 1 second.
 ================================================== */
 {
-  function runAfterDelay(callback){
-    setTimeout(() => {
-      callback();
-    }, 1000);
-  }
+    function runDelay(callback){
+        setTimeout(() => {
+            callback();
+        }, 1000);
+    }
 
-  function greet(){
-    console.log("Hello");
-  }
+    function greet(){
+        console.log("Hello");
+    }
 
-  runAfterDelay(greet);
+    runDelay(greet);
 }
-
 
 /* ==================================================
 TASK 5
@@ -1651,7 +1650,26 @@ and print:
 "Step 2 complete"
 ================================================== */
 {
+  function stepOne(){
+    return new Promise((resolve, reject) => {
+        resolve("Step 1 complete");
+    });
+  }
 
+  function stepTwo(){
+    return new Promise((resolve, reject) => {
+        resolve("Step 2 complete");
+    })
+  }
+
+  stepOne()
+           .then((result) => {
+            console.log(result);
+            return stepTwo();
+           })
+           .then((result) => {
+            console.log(result);
+           })
 }
 
 /* ==================================================
@@ -1661,27 +1679,12 @@ an object with name and age after 2 seconds
 and prints it.
 ================================================== */
 {
+  function dataloader(name, age){
+    setTimeout(() => {
+        console.log("Data = " + name + age);
+    }, 2000);
+  }
 
+  dataloader("Aditya", 21);
 }
 
-/* ==================================================
-TASK 9
-Create a flow:
-Start → Check → Finish
-Each step should run one after another
-and print its name.
-================================================== */
-{
-
-}
-
-/* ==================================================
-TASK 10 (Challenge)
-Create a login flow:
-- Check username
-- If correct, load profile
-- Finally print "Dashboard ready"
-================================================== */
-{
-
-}
