@@ -1931,3 +1931,141 @@ and then prints "Task completed".
   success();
 }
 
+/* ==================================================
+TASK 4 (Beginner)
+Create a function getNumber
+that returns a promise resolving with 5.
+Use async/await to get the value
+and print number * 2.
+================================================== */
+{
+  function getNumber(){
+    return new Promise((resolve, reject) => {
+        resolve(5);
+    })
+  }
+
+  async function value(){
+    const a = await getNumber();
+    console.log(a * 2);
+  }
+
+  value();
+}
+
+/* ==================================================
+TASK 5 (Intermediate)
+Create two functions:
+stepOne → resolves with "Step One"
+stepTwo → resolves with "Step Two"
+
+Use async/await to run them in order
+and print both results.
+================================================== */
+{
+  function stepOne(){
+    return new Promise((resolve, reject) => {
+        resolve("Step one");
+    })
+  }
+
+  function stepTwo(){
+    return new Promise((resolve, reject) => {
+        resolve("Step Two");
+    })
+  }
+
+  async function done(){
+    let a = await stepOne();
+    console.log(a);
+
+    let b = await stepTwo();
+    console.log(b);
+  }
+
+  done();
+}
+
+/* ==================================================
+TASK 6 (Intermediate)
+Create a function checkAge
+that returns a promise.
+If age >= 18, resolve with "Allowed".
+Else reject with "Not allowed".
+
+Handle both cases using async/await.
+================================================== */
+{
+   function checkAge(age){
+    return new Promise((resolve, reject) => {
+        if (age >= 18){
+            resolve("Allowed");
+        } else {
+            reject("Not allowed");
+        }
+    })
+   }
+
+   async function adult(age){
+    try {
+    const a = await checkAge(age);
+    console.log(a);
+   } catch (error){
+    console.log(error);
+   }}
+   
+   adult(17);
+}
+
+/* ==================================================
+TASK 7 (Intermediate)
+Create a function fetchUser
+that resolves after 2 seconds
+with an object { name, age }.
+
+Use async/await to print the user data.
+================================================== */
+{
+
+}
+
+/* ==================================================
+TASK 8 (Advanced)
+Create a login flow using async/await:
+- verifyUser
+- loadProfile
+- showDashboard
+
+Run them in sequence.
+================================================== */
+{
+
+}
+
+/* ==================================================
+TASK 9 (Advanced – Error Handling)
+Modify a flow so that if any step fails,
+execution stops and an error is printed
+using try/catch.
+================================================== */
+{
+
+}
+
+/* ==================================================
+TASK 10 (Challenge)
+Create a purchase flow:
+- verifyPayment
+- placeOrder
+- sendConfirmation
+
+Use async/await.
+If payment fails, stop execution
+and print "Payment failed".
+================================================== */
+{
+
+}
+
+
+
