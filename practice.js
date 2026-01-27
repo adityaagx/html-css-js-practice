@@ -1866,3 +1866,68 @@ stop the flow and print "Payment failed".
 
 }
 
+/* ==================================================
+TASK 1 (Beginner)
+Create an async function that prints
+"Hello Async" to the console.
+================================================== */
+{
+  function greet(){
+    return new Promise((resolve, reject) => {
+        resolve("Hello Async");
+    })
+  }
+
+  async function hello(){
+    const a = await greet();
+    console.log(a);
+  }
+
+  hello();
+}
+
+/* ==================================================
+TASK 2 (Beginner)
+Create a function that returns a promise
+which resolves with "Done" after 1 second.
+Use async/await to print the result.
+================================================== */
+{
+   function success(){
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve("Done")
+        }, 1000);
+    })
+   }
+
+   async function done(){
+    const a = await success();
+    console.log(a);
+   }
+
+   done();
+}
+
+/* ==================================================
+TASK 3 (Beginner)
+Create an async function that waits 2 seconds
+and then prints "Task completed".
+================================================== */
+{
+  function done(){
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve("Task completed");
+        }, 2000);
+    })
+  }
+
+  async function success(){
+    let a = await done();
+    console.log(a);
+  }
+
+  success();
+}
+
