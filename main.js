@@ -16,9 +16,10 @@ Anonymous function - A function that does not have a name associated with it./ D
 Async function - Multiple things are running parallely at the same time, context switching with each other, runs in parts.
 Sync function - Sequential, only one thing is happening at a time.
 Javascript can context witch using async functions.
+Promise - represents a value that will be available in the future.
 Async - makes a function return a Promise
-Await - pauses execution until a Promise resolves
-Promise - represents a value that will be available in the future
+Await - pauses execution until a Promise resolves.
+Try/Catch - used for error handling in async await.
 DOM - Document Object Model is a tree-like structure created by the browser that represents HTML elements and allows JavaScript
 	  to manipulate the webpage dynamically.It lets JavaScript talk to HTML and change the page dynamically.
 Events - Events are actions performed by the user or browser that JavaScript can listen to and respond to.
