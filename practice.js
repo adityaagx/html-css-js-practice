@@ -1771,3 +1771,98 @@ Create a login flow:
       console.log(error);
     });
 }
+
+/* ==================================================
+TASK 11
+Create a flow with three steps:
+prepare → execute → cleanup
+
+Each step should:
+- run one after another
+- print its step name
+================================================== */
+{
+  function prepare(){
+    return new Promise((resolve, reject) => {
+        resolve("prepare");
+    })
+  }
+
+  function execute(){
+    return new Promise((resolve, reject) => {
+        resolve("execute");
+    })
+  }
+
+  function cleanup(){
+    return new Promise((resolve, reject) => {
+        resolve("cleanup");
+    })
+  }
+
+  prepare()
+          .then((result) => {
+            console.log(result);
+            return execute();
+          })
+
+          .then((result) => {
+            console.log(result);
+            return cleanup();
+          })
+
+          .then((result) => {
+            console.log(result);
+          })
+}
+
+/* ==================================================
+TASK 12 (Challenge)
+Create a purchase flow:
+- verifyPayment
+- placeOrder
+- showConfirmation
+
+If payment verification fails,
+stop the flow and print "Payment failed".
+================================================== */
+{
+  function verifyPayment(isPaid){
+    return new Promise((resolve, reject) => {
+        if(isPaid){
+        resolve("Payment verification done");
+        } else {reject("Payment verification failed");
+        }
+    })
+  }
+
+  function placeOrder(){
+    return new Promise((resolve, reject) => {
+        resolve("placeOrder");
+    })
+  }
+
+  function showConfirmation(){
+    return new Promise((resolve, reject) => {
+        resolve("showConfirmation");
+    })
+  }
+
+  verifyPayment()
+                .then((result) => {
+                    console.log(result);
+                    return placeOrder();
+                })
+
+                 .then((result) => {
+                    console.log(result);
+                    return showConfirmation();
+                })
+
+                 .then((result) => {
+                    console.log(result);
+                    
+                })
+
+}
+
