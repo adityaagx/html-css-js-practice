@@ -1688,3 +1688,86 @@ and prints it.
   dataloader("Aditya", 21);
 }
 
+/* ==================================================
+TASK 9
+Create a flow:
+Start → Check → Finish
+Each step should run one after another
+and print its name.
+================================================== */
+{
+  function start(){
+    return new Promise((resolve, reject) => {
+        resolve("Start");
+    })
+  }
+
+  function check(){
+    return new Promise((resolve, reject) => {
+        resolve("Check");
+    })
+  }
+
+  function finish(){
+    return new Promise((resolve, reject) => {
+        resolve("Finish");
+    })
+  }
+
+  start()
+         .then((result) => {
+            console.log(result);
+            return check();
+         })
+
+         .then((result) => {
+            console.log(result);
+            return finish();
+         })
+
+         .then((result) => {
+            console.log(result);
+         })
+}
+
+/* ==================================================
+TASK 10 (Challenge)
+Create a login flow:
+- Check username
+- If correct, load profile
+- Finally print "Dashboard ready"
+================================================== */
+{
+  function checkUsername(name){
+    return new Promise((resolve, reject) => {
+      if(name.length > 5){
+        resolve("Username correct");
+      } else {
+        reject("Invalid username");
+      }
+    });
+  }
+
+  function loadProfile(){
+    return new Promise((resolve) => {
+      resolve("Profile loaded");
+    });
+  }
+
+  function showDashboard(){
+    console.log("Dashboard ready");
+  }
+
+  checkUsername("Aditya")
+    .then((result) => {
+      console.log(result);
+      return loadProfile();
+    })
+    .then((result) => {
+      console.log(result);
+      showDashboard();
+    })
+    .catch((error) => {
+      console.log(error);
+    });
+}
