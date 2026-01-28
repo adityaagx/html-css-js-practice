@@ -2182,3 +2182,148 @@ and print "Payment failed".
   orderStatus("failed");
 }
 
+/* ==================================================
+TASK 1
+Create a function that takes an array of numbers
+and returns how many numbers are greater than 50.
+================================================== */
+{
+  function countGreaterThan50(arr) {
+    let count = 0;
+
+    for (let i = 0; i < arr.length; i++) {
+      if (arr[i] > 50) {
+        count++;
+      }
+    }
+
+    return count;
+  }
+
+  console.log(countGreaterThan50([23, 56, 34, 78]));
+}
+
+/* ==================================================
+TASK 2
+Create a button in HTML.
+When clicked:
+- wait 1 second
+- then change the background color of the page
+- then print "Background changed"
+================================================== */
+{
+  let btn = document.querySelector("button");
+
+  btn.addEventListener("click", function () {
+    setTimeout(() => {
+      document.body.style.backgroundColor = "red";
+      console.log("Background changed");
+    }, 1000);
+  });
+}
+
+/* ==================================================
+TASK 3
+Create a function that takes a string
+and returns a promise.
+If string length > 5 → resolve "Valid string"
+Else → reject "Too short"
+Handle the result properly.
+================================================== */
+{
+function task(string){
+    return new Promise((resolve, reject) => {
+        if(string.length>5){
+            resolve("Valid String");
+        } else {
+            reject("Too short");
+        }
+    })}  
+
+    async function check(string){
+        try {
+        const a = await task(string)
+        } catch (error) {
+            console.log("Error " + error)
+        }
+    }
+
+    check("Adi")
+}
+
+/* ==================================================
+TASK 4
+Select an input and a button.
+When button is clicked:
+- read input value
+- convert it to uppercase
+- show it inside a paragraph
+================================================== */
+
+
+/* ==================================================
+TASK 5
+Create a function that accepts another function
+and a number.
+Call the passed function after 2 seconds
+and pass the number to it.
+================================================== */
+
+
+/* ==================================================
+TASK 6
+Create an async function that:
+- waits 1 second
+- prints "Loading..."
+- waits another 1 second
+- prints "Loaded"
+================================================== */
+
+
+/* ==================================================
+TASK 7
+Create an object with properties:
+name, age, isStudent
+
+Create a function that:
+- checks age
+- prints "Adult" or "Minor"
+================================================== */
+
+
+/* ==================================================
+TASK 8
+Create a fake API function that:
+- returns a promise
+- resolves after 2 seconds
+- returns an array of 3 usernames
+
+Use async/await to print them one by one.
+================================================== */
+
+
+/* ==================================================
+TASK 9
+Create a form.
+On submit:
+- stop page refresh
+- wait 1 second
+- print "Form processed"
+================================================== */
+
+
+/* ==================================================
+TASK 10 (Challenge)
+Create a flow:
+startProcess → validateData → finishProcess
+
+Rules:
+- startProcess always runs
+- validateData may fail
+- if it fails, stop everything
+- if success, finishProcess runs
+
+Use async/await + try/catch.
+================================================== */
+
+
