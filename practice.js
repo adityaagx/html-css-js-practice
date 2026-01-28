@@ -2026,7 +2026,20 @@ with an object { name, age }.
 Use async/await to print the user data.
 ================================================== */
 {
+  function fetchUser(name, age){
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve("User " + name + " " + age);
+        }, 2000);
+    })
+  }
 
+  async function user(name, age){
+    const a = await fetchUser(name, age);
+    console.log(a);
+  }
+
+  user("Aditya", 21);
 }
 
 /* ==================================================
@@ -2039,6 +2052,36 @@ Create a login flow using async/await:
 Run them in sequence.
 ================================================== */
 {
+  function verifyUser(){
+    return new Promise((resolve, reject) => {
+        resolve("Verify User");
+    })
+  }
+
+  function loadProfile(){
+    return new Promise((resolve, reject) => {
+        resolve("Load Profile");
+    })
+  }
+
+  function showDashboard(){
+    return new Promise((resolve, reject) => {
+        resolve("Show Dashboard");
+    })
+  }
+
+  async function loginFlow(){
+    const a = await verifyUser();
+    console.log(a);
+
+    const b = await loadProfile();
+    console.log(b);
+
+    const c = await showDashboard();
+    console.log(c);
+  }
+
+  loginFlow();
 
 }
 
@@ -2049,8 +2092,42 @@ execution stops and an error is printed
 using try/catch.
 ================================================== */
 {
+  function stepOne(){
+    return new Promise((resolve) => {
+      resolve("Step One done");
+    });
+  }
 
+  function stepTwo(){
+    return new Promise((resolve, reject) => {
+      reject("Step Two failed"); // simulate failure
+    });
+  }
+
+  function stepThree(){
+    return new Promise((resolve) => {
+      resolve("Step Three done");
+    });
+  }
+
+  async function runFlow(){
+    try {
+      const a = await stepOne();
+      console.log(a);
+
+      const b = await stepTwo();
+      console.log(b);
+
+      const c = await stepThree();
+      console.log(c);
+    } catch (error) {
+      console.log("Error:", error);
+    }
+  }
+
+  runFlow();
 }
+
 
 /* ==================================================
 TASK 10 (Challenge)
@@ -2063,9 +2140,45 @@ Use async/await.
 If payment fails, stop execution
 and print "Payment failed".
 ================================================== */
+
 {
+  function verifyPayment(status){
+    return new Promise((resolve, reject) => {
+      if (status === "success") {
+        resolve("Payment success");
+      } else {
+        reject("Payment failed");
+      }
+    });
+  }
 
+  function placeOrder(){
+    return new Promise((resolve) => {
+      resolve("Order placed");
+    });
+  }
+
+  function sendConfirmation(){
+    return new Promise((resolve) => {
+      resolve("Confirmation sent");
+    });
+  }
+
+  async function orderStatus(status){
+    try {
+      const a = await verifyPayment(status);
+      console.log(a);
+
+      const b = await placeOrder();
+      console.log(b);
+
+      const c = await sendConfirmation();
+      console.log(c);
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
+  orderStatus("failed");
 }
-
-
 
