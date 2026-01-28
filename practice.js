@@ -2259,8 +2259,16 @@ When button is clicked:
 - convert it to uppercase
 - show it inside a paragraph
 ================================================== */
+{
+let btn = document.querySelector("button");
+let input = document.querySelector("input");
+let para = document.querySelector("p");
 
-
+btn.addEventListener("click", () => {
+    let text = input.value;
+    para.innerText = text.toUpperCase();
+});
+}
 /* ==================================================
 TASK 5
 Create a function that accepts another function
@@ -2268,6 +2276,19 @@ and a number.
 Call the passed function after 2 seconds
 and pass the number to it.
 ================================================== */
+{
+    function one(callback, number){
+    setTimeout(() => {
+        callback(number);
+    }, 2000);
+    }
+
+    function square(number){
+        console.log(number * number);
+    }
+
+    one(square, 4);
+}
 
 
 /* ==================================================
@@ -2278,7 +2299,33 @@ Create an async function that:
 - waits another 1 second
 - prints "Loaded"
 ================================================== */
+{
+    function one(){
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve("Loading")
+        }, 1000);
+    })
+    }
 
+    function two(){
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve("Loaded")
+        }, 1000);
+    })
+    }
+
+    async function three(){
+        let a = await one();
+        console.log(a);
+
+        let b = await two();
+        console.log(b);
+    }
+
+    three();
+}
 
 /* ==================================================
 TASK 7
