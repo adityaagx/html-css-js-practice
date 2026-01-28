@@ -2336,8 +2336,23 @@ Create a function that:
 - checks age
 - prints "Adult" or "Minor"
 ================================================== */
+{
+    let user = {
+        name : "Aditya",
+        age : 21,
+        isStudent : true
+    }
 
+    function checkAge(name, age, student){
+        if(user.age>18){
+            console.log("Adult");
+        } else {
+            console.log("Minor");
+        }
+    }
 
+    checkAge(user);
+}
 /* ==================================================
 TASK 8
 Create a fake API function that:
@@ -2347,7 +2362,22 @@ Create a fake API function that:
 
 Use async/await to print them one by one.
 ================================================== */
+{
+  function fakeAPI() {
+    return new Promise((resolve) => {
+      setTimeout(() => {
+        resolve(["Aditya", "Ritesh", "Bhavya"]);
+      }, 2000);
+    });
+  }
 
+  async function showUsers() {
+    let users = await fakeAPI();
+    console.log(users);
+  }
+
+  showUsers();
+}
 
 /* ==================================================
 TASK 9
@@ -2357,7 +2387,17 @@ On submit:
 - wait 1 second
 - print "Form processed"
 ================================================== */
+{
+let form = document.querySelector("form");
 
+form.addEventListener("submit", (e) => {
+   e.preventDefault();
+
+   setTimeout(() => {
+    console.log("Form procesing");
+   }, 1000);
+})
+}
 
 /* ==================================================
 TASK 10 (Challenge)
@@ -2372,5 +2412,39 @@ Rules:
 
 Use async/await + try/catch.
 ================================================== */
+{
+  function startProcess() {
+    return new Promise((resolve) => {
+      resolve("Start Process");
+    });
+  }
 
+  function validateData(isValid) {
+    return new Promise((resolve, reject) => {
+      if (isValid) {
+        resolve("Data Valid");
+      } else {
+        reject("Validation failed");
+      }
+    });
+  }
+
+  function finishProcess() {
+    return new Promise((resolve) => {
+      resolve("Finish Process");
+    });
+  }
+
+  async function run() {
+    try {
+      console.log(await startProcess());
+      console.log(await validateData(false)); // change to true to succeed
+      console.log(await finishProcess());
+    } catch (error) {
+      console.log("Error:", error);
+    }
+  }
+
+  run();
+}
 
