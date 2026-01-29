@@ -2507,7 +2507,7 @@ Example:
 {
     const users = [{name : "Aditya"}, {name : "Ritesh"}, {name : "Bhavna"}];
 
-    const newArray = user.map((users) => {
+    const newArray = users.map((users) => {
         return users.name
     })
 
@@ -2571,7 +2571,15 @@ From an array of strings,
 return only strings that contain
 more than 4 characters.
 ================================================== */
+{
+    const array = ["Aditya", "Bha", "Rite"];
 
+    const newArray = array.filter((array) => {
+        return array.length>4;
+    })
+
+    console.log(newArray);
+}
 
 /* ==================================================
 TASK 9
@@ -2579,7 +2587,18 @@ Using reduce:
 From an array of numbers,
 count how many numbers are greater than 50.
 ================================================== */
+{
+    const array = [1, 265, 3, 489, 5];
 
+    const newArray = array.reduce((count, array) => {
+        if(array > 50) {
+            return count + 1;
+        }
+        return count;
+    }, 0);
+
+    console.log(newArray);
+}
 
 /* ==================================================
 TASK 10 (Challenge)
@@ -2589,3 +2608,15 @@ From an array of user objects:
 - get their salaries
 - calculate total salary
 ================================================== */
+const users = [
+    { name: "Aditya", status: "Active", salary: 45000 },
+    { name: "Ritesh", status: "InActive", salary: 45000 },
+    { name: "Bhavna", status: "Active", salary: 45000 }
+];
+
+const totalSalary = users
+    .filter(user => user.status === "Active")
+    .map(user => user.salary)
+    .reduce((total, salary) => total + salary, 0);
+
+console.log(totalSalary);
