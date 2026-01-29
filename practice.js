@@ -2448,3 +2448,91 @@ Use async/await + try/catch.
   run();
 }
 
+/* ==================================================
+TASK 1
+Using map:
+Convert an array of numbers into an array
+where each number is multiplied by 3.
+================================================== */
+{
+    const array = [1, 2, 3, 4, 5];
+
+    const newArray = array.map((array) => {
+        return array * 3
+    });
+
+    console.log(newArray);
+}
+
+/* ==================================================
+TASK 2
+Using filter:
+From an array of numbers,
+return only the even numbers.
+================================================== */
+{
+    const array = [1, 2, 3, 4, 5];
+
+    const newArray = array.filter((array) => {
+        return array % 2 == 0;
+    });
+    console.log(newArray);
+}
+
+/* ==================================================
+TASK 3
+Using reduce:
+Calculate the total sum of all numbers
+in an array.
+================================================== */
+{
+    const array = [1, 2, 3, 4, 5];
+
+    const newArray = array.reduce((array, total) => {
+        return total + array;
+    }, 0);
+
+    console.log(newArray);
+}
+
+/* ==================================================
+TASK 4
+Using map:
+From an array of user objects,
+return a new array containing only usernames.
+
+Example:
+[{name:"A"}, {name:"B"}] → ["A", "B"]
+================================================== */
+
+
+/* ==================================================
+TASK 5
+Using filter:
+From an array of user objects,
+return only users whose age is above 18.
+================================================== */
+
+
+/* ==================================================
+TASK 6
+Using reduce:
+From an array of numbers,
+find the maximum number.
+================================================== */
+
+
+/* ==================================================
+TASK 7
+Using map:
+Convert an array of strings
+into an array of their lengths.
+================================================== */
+
+
+/* ==================================================
+TASK 8
+Using filter:
+From an array of strings,
+return only strings that co
+
