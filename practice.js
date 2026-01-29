@@ -2504,7 +2504,15 @@ return a new array containing only usernames.
 Example:
 [{name:"A"}, {name:"B"}] → ["A", "B"]
 ================================================== */
+{
+    const users = [{name : "Aditya"}, {name : "Ritesh"}, {name : "Bhavna"}];
 
+    const newArray = user.map((users) => {
+        return users.name
+    })
+
+    console.log(newArray);
+}
 
 /* ==================================================
 TASK 5
@@ -2512,15 +2520,34 @@ Using filter:
 From an array of user objects,
 return only users whose age is above 18.
 ================================================== */
+{
+    const users = [
+        { name: "Aditya", age: 21 },
+        { name: "Bhavna", age: 14 },
+        { name: "Ritesh", age: 24 }
+    ];
 
+    const newArray = users.filter((users) => {
+        return users.age > 18;
+    })
 
+    console.log(newArray);
+}
 /* ==================================================
 TASK 6
 Using reduce:
 From an array of numbers,
 find the maximum number.
 ================================================== */
+{
+    const array = [1, 2, 3, 4, 5];
 
+    const maxNumber = array.reduce((max, current) => {
+        return current > max ? current : max;
+    }, array[0]);
+
+    console.log(maxNumber); 
+}
 
 /* ==================================================
 TASK 7
@@ -2528,11 +2555,37 @@ Using map:
 Convert an array of strings
 into an array of their lengths.
 ================================================== */
+{
+    let array = ["Aditya", "Bhvya", "Ritesh"];
 
+    const newArray = array.map((array) => {
+        return array.length;
+    });
 
+    console.log(newArray);
+}
 /* ==================================================
 TASK 8
 Using filter:
 From an array of strings,
-return only strings that co
+return only strings that contain
+more than 4 characters.
+================================================== */
 
+
+/* ==================================================
+TASK 9
+Using reduce:
+From an array of numbers,
+count how many numbers are greater than 50.
+================================================== */
+
+
+/* ==================================================
+TASK 10 (Challenge)
+Using map + filter + reduce:
+From an array of user objects:
+- keep only active users
+- get their salaries
+- calculate total salary
+================================================== */
