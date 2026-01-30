@@ -2679,7 +2679,11 @@ TASK 4 (Loops)
 ================================================== */
 
 {
+    const array = [1, 2, 3, 4, 5];
 
+    for(i=0; i<array.length; i++){
+    console.log(array[i]);
+  };
 }
 
 /* ==================================================
@@ -2690,7 +2694,12 @@ TASK 5 (Arrays)
 - Print the last fruit
 ================================================== */
 
+{
+    const fruits = ["apple", "banana", "mango"];
 
+    console.log(fruits[0]);
+    console.log(fruits[2]);
+}
 
 /* ==================================================
 TASK 6 (Array + Loop)
@@ -2701,9 +2710,13 @@ const numbers = [1, 2, 3, 4, 5]
 - Print each number multiplied by 2
 ================================================== */
 
-const numbers = [1, 2, 3, 4, 5]
+{
+    const numbers = [1, 2, 3, 4, 5];
 
-
+    for(i=0; i<numbers.length; i++){
+        console.log (numbers[i] * 2);
+    };
+}
 
 /* ==================================================
 TASK 7 (Objects)
