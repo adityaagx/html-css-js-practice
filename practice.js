@@ -2620,3 +2620,121 @@ const totalSalary = users
     .reduce((total, salary) => total + salary, 0);
 
 console.log(totalSalary);
+
+/* ==================================================
+TASK 1 (Variables)
+- Create a variable called name
+- Store your name in it
+- Create a variable called age
+- Print: "My name is ___ and I am ___ years old"
+================================================== */
+
+{
+    let name = "Aditya";
+    let age = 21;
+
+    console.log("My name is " + name + " and I am " + age + " years old.");
+}
+
+/* ==================================================
+TASK 2 (Functions)
+- Create a function called greet
+- It should take one parameter: name
+- It should return: "Hello, <name>!"
+================================================== */
+
+{
+    function greet(name){
+        return "Hello, " + name;
+    };
+
+    console.log(greet("Aditya"));
+}
+
+/* ==================================================
+TASK 3 (If / Else)
+- Create a function called checkAge
+- It takes age as a parameter
+- If age is 18 or more, return "Adult"
+- Otherwise, return "Minor"
+================================================== */
+
+{
+    function checkAge(age){
+        if(age >= 18){
+            return "Adult";
+        } else {
+            return "Minor";
+        }
+    }
+
+    console.log(checkAge(21));
+}
+
+/* ==================================================
+TASK 4 (Loops)
+- Use a for loop
+- Print numbers from 1 to 5
+- Each number should be printed separately
+================================================== */
+
+{
+
+}
+
+/* ==================================================
+TASK 5 (Arrays)
+- Create an array called fruits
+- Add 3 fruit names
+- Print the first fruit
+- Print the last fruit
+================================================== */
+
+
+
+/* ==================================================
+TASK 6 (Array + Loop)
+Given this array:
+const numbers = [1, 2, 3, 4, 5]
+
+- Use a loop
+- Print each number multiplied by 2
+================================================== */
+
+const numbers = [1, 2, 3, 4, 5]
+
+
+
+/* ==================================================
+TASK 7 (Objects)
+- Create an object called user
+- Properties: name, age, isStudent
+- Print: "<name> is <age> years old"
+================================================== */
+
+
+
+/* ==================================================
+TASK 8 (Functions + Arrays)
+- Create a function called sumArray
+- It takes an array of numbers
+- It returns the total sum
+================================================== */
+
+
+
+/* ==================================================
+TASK 9 (Callbacks)
+- Create a function called doSomething
+- It takes one parameter: callback
+- Inside the function, call the callback
+================================================== */
+
+
+
+/* ==================================================
+TASK 10 (Async Basics)
+- Use setTimeout
+- Print "Hello after 2 seconds"
+================================================== */
+
