@@ -2725,7 +2725,15 @@ TASK 7 (Objects)
 - Print: "<name> is <age> years old"
 ================================================== */
 
+{
+    const user = {
+        firstName : "Aditya",
+        age : 21,
+        isStudent : true
+    };
 
+    console.log(`${user.firstName} is ${user.age} years old`);
+}
 
 /* ==================================================
 TASK 8 (Functions + Arrays)
@@ -2734,7 +2742,18 @@ TASK 8 (Functions + Arrays)
 - It returns the total sum
 ================================================== */
 
+{
+    const arrayNum = [1, 2, 3, 4, 5];
+    
+    function sumArray(array){
+        let total = 0;
+        for(i = 0; i < array.length; i++){
+            total = total + array[i];
+        } return total;
+    }
 
+    console.log(sumArray(arrayNum));
+}
 
 /* ==================================================
 TASK 9 (Callbacks)
@@ -2743,6 +2762,17 @@ TASK 9 (Callbacks)
 - Inside the function, call the callback
 ================================================== */
 
+{
+    function doSomething(callback){
+    return callback();
+    }
+
+    function greet(){
+        console.log("hello");
+    }
+
+    doSomething(greet);
+}
 
 
 /* ==================================================
@@ -2751,3 +2781,14 @@ TASK 10 (Async Basics)
 - Print "Hello after 2 seconds"
 ================================================== */
 
+{
+    function greet(){
+        return new Promise((resolve, reject) => {
+            setTimeout(() => {
+                console.log("Hello");
+            }, 2000);
+        })
+    }
+
+    greet();
+}
