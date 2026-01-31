@@ -2975,3 +2975,142 @@ TASK 20 (Async Thinking)
 
     delayedMessage();
 }
+
+/* ==================================================
+TASK 21 (map + filter)
+Given an array of numbers:
+- Keep only numbers greater than 5
+- Square them
+- Store result in a new array
+================================================== */
+
+{
+    const arrayNum = [1, 2, 3, 4, 5, 6, 7];
+
+    const newArray = arrayNum
+          .filter(n => n> 5)
+          .map(n => n * n)
+
+    console.log(newArray);
+}
+
+/* ==================================================
+TASK 22 (Array of Objects + map)
+Given this array:
+const users = [
+  { name: "Aman", age: 17 },
+  { name: "Riya", age: 22 },
+  { name: "Karan", age: 19 }
+];
+
+- Create a new array that contains only user names
+================================================== */
+
+{
+    const users = [
+  { name: "Aman", age: 17 },
+  { name: "Riya", age: 22 },
+  { name: "Karan", age: 19 }
+   ];
+
+   const newArray = users.map(users => users.name);
+
+   console.log(newArray);
+}
+
+/* ==================================================
+TASK 23 (Array of Objects + filter)
+Using the same users array:
+- Create a new array of users who are 18 or older
+================================================== */
+
+{
+  const users = [
+  { name: "Aman", age: 19 },
+  { name: "Riya", age: 22 },
+  { name: "Karan", age: 17 }
+   ];
+
+   const newArray = users.filter(users => users.age >= 18);
+
+   console.log(newArray);
+}
+
+/* ==================================================
+TASK 24 (map + filter + reduce) ⭐ IMPORTANT
+Given this array:
+const employees = [
+  { name: "A", salary: 3000, active: true },
+  { name: "B", salary: 2000, active: false },
+  { name: "C", salary: 4000, active: true }
+];
+
+- Keep only active employees
+- Get their salaries
+- Calculate total salary
+================================================== */
+
+
+
+/* ==================================================
+TASK 25 (Reduce - Frequency Counter)
+Given this array:
+const fruits = ["apple", "banana", "apple", "orange", "banana", "apple"];
+
+- Create an object that counts how many times each fruit appears
+Expected output:
+{ apple: 3, banana: 2, orange: 1 }
+================================================== */
+
+
+
+/* ==================================================
+TASK 26 (Functions + Closures)
+- Create a function called counter
+- counter() should return another function
+- Each time the returned function is called, it increases count by 1
+================================================== */
+
+
+
+/* ==================================================
+TASK 27 (Async + Promise)
+- Create a function called wait
+- It should return a Promise
+- Resolve after 1 second with the message "Done waiting"
+- Use async/await to call it
+================================================== */
+
+
+
+/* ==================================================
+TASK 28 (Error Handling)
+- Modify TASK 27
+- Reject the promise if time < 0
+- Handle error using try/catch
+================================================== */
+
+
+
+/* ==================================================
+TASK 29 (Real-World Pattern)
+Given an array of prices:
+const prices = [100, 200, 300];
+
+- Apply 10% discount to each price
+- Calculate final total price
+================================================== */
+
+
+
+/* ==================================================
+TASK 30 (Thinking in React Style)
+Given an array of users:
+const users = [
+  { id: 1, name: "Aman" },
+  { id: 2, name: "Riya" }
+];
+
+- Convert this into an array of strings like:
+["1 - Aman", "2 - Riya"]
+================================================== */
