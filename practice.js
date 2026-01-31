@@ -2792,3 +2792,95 @@ TASK 10 (Async Basics)
 
     greet();
 }
+
+/* ==================================================
+TASK 11 (Variables + Logic)
+- Create two variables: a and b
+- Swap their values WITHOUT creating a third variable
+- Print the result
+================================================== */
+
+
+
+/* ==================================================
+TASK 12 (Functions + Conditions)
+- Create a function called isEven
+- It takes a number
+- Returns true if even, false if odd
+================================================== */
+
+
+
+/* ==================================================
+TASK 13 (Loops + Arrays)
+- Given an array of numbers
+- Create a new array that contains only numbers greater than 3
+- Use a loop (NOT filter)
+================================================== */
+
+
+
+/* ==================================================
+TASK 14 (Objects + Arrays)
+Given this array:
+const users = [
+  { name: "Aman", age: 17 },
+  { name: "Riya", age: 22 },
+  { name: "Karan", age: 19 }
+];
+
+- Print names of users who are 18 or older
+================================================== */
+
+
+
+/* ==================================================
+TASK 15 (Functions + Arrays)
+- Create a function called findMax
+- It takes an array of numbers
+- It returns the largest number
+================================================== */
+
+
+
+/* ==================================================
+TASK 16 (Callbacks - Real Use Case)
+- Create a function called processData
+- It takes two parameters: data, callback
+- Inside the function, pass data to callback
+================================================== */
+
+
+
+/* ==================================================
+TASK 17 (Array Methods - map)
+- Given an array of numbers
+- Create a new array where each number is squared
+- Use map()
+================================================== */
+
+
+
+/* ==================================================
+TASK 18 (Array Methods - filter)
+- Given an array of numbers
+- Create a new array with only odd numbers
+- Use filter()
+================================================== */
+
+
+
+/* ==================================================
+TASK 19 (Array Methods - reduce)
+- Given an array of numbers
+- Calculate the total sum using reduce()
+================================================== */
+
+
+
+/* ==================================================
+TASK 20 (Async Thinking)
+- Create a function called delayedMessage
+- It should print "Done!" after 1 second
+- Use setTimeout
+================================================== */
