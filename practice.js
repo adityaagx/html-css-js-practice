@@ -2800,7 +2800,13 @@ TASK 11 (Variables + Logic)
 - Print the result
 ================================================== */
 
+{
+    let a = 2;
+    let b = 3;
 
+    [a, b] = [b, a];
+    console.log(a, b);
+}
 
 /* ==================================================
 TASK 12 (Functions + Conditions)
@@ -2809,7 +2815,17 @@ TASK 12 (Functions + Conditions)
 - Returns true if even, false if odd
 ================================================== */
 
+{
+    function isEven(num){
+        if(num % 2 === 0){
+            return true
+        } else {
+            return false
+        }
+    };
 
+    console.log(isEven(9));
+}
 
 /* ==================================================
 TASK 13 (Loops + Arrays)
@@ -2818,7 +2834,18 @@ TASK 13 (Loops + Arrays)
 - Use a loop (NOT filter)
 ================================================== */
 
+{
+    const arrayNum = [1, 2, 3, 4, 5];
+    let newArray = [];
 
+    for(i=0; i<arrayNum.length; i++){
+        if(arrayNum[i] > 3){
+            newArray.push(arrayNum[i]);
+        }
+    };
+
+    console.log(newArray);
+}
 
 /* ==================================================
 TASK 14 (Objects + Arrays)
