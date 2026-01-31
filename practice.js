@@ -2859,7 +2859,19 @@ const users = [
 - Print names of users who are 18 or older
 ================================================== */
 
+{
+    const users = [
+  { name: "Aman", age: 17 },
+  { name: "Riya", age: 22 },
+  { name: "Karan", age: 19 }
+  ];
 
+  for (i = 0; i < users.length; i++) {
+    if (users[i].age >= 18) {
+        console.log(users[i].name);
+    }
+}
+}
 
 /* ==================================================
 TASK 15 (Functions + Arrays)
@@ -2868,7 +2880,21 @@ TASK 15 (Functions + Arrays)
 - It returns the largest number
 ================================================== */
 
+{
+    function findMax(arr) {
+    let maxNum = arr[0];
 
+    for (let i = 1; i < arr.length; i++) {
+        if (arr[i] > maxNum) {
+            maxNum = arr[i];
+        }
+    }
+
+    return maxNum;
+   }
+
+   console.log(findMax([1, 2, 3, 4, 5]));
+}
 
 /* ==================================================
 TASK 16 (Callbacks - Real Use Case)
@@ -2877,7 +2903,17 @@ TASK 16 (Callbacks - Real Use Case)
 - Inside the function, pass data to callback
 ================================================== */
 
+{
+    function processData(data, callback){
+        callback(data);
+    }
 
+    function greet(greeting){
+        console.log(greeting);
+    }
+
+    processData("Hello", greet);
+}
 
 /* ==================================================
 TASK 17 (Array Methods - map)
