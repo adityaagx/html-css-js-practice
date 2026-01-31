@@ -2922,7 +2922,13 @@ TASK 17 (Array Methods - map)
 - Use map()
 ================================================== */
 
+{
+    let num = [1, 2, 3, 4, 5];
 
+    let squareNum = num.map(n => n * n);
+
+    console.log(squareNum);
+}
 
 /* ==================================================
 TASK 18 (Array Methods - filter)
@@ -2931,7 +2937,13 @@ TASK 18 (Array Methods - filter)
 - Use filter()
 ================================================== */
 
+{
+    const arrayNum = [1, 2, 3, 4, 5];
 
+    let oddNum = arrayNum.filter(n => n % 2 == 1);
+
+    console.log(oddNum);
+}
 
 /* ==================================================
 TASK 19 (Array Methods - reduce)
@@ -2939,7 +2951,13 @@ TASK 19 (Array Methods - reduce)
 - Calculate the total sum using reduce()
 ================================================== */
 
+{
+    const arrayNum = [1, 2, 3, 4, 5];
 
+    let sum = arrayNum.reduce((total, n) => total = total + n, 0);
+
+    console.log(sum);
+}
 
 /* ==================================================
 TASK 20 (Async Thinking)
@@ -2947,3 +2965,13 @@ TASK 20 (Async Thinking)
 - It should print "Done!" after 1 second
 - Use setTimeout
 ================================================== */
+
+{
+    function delayedMessage(){
+        setTimeout(() => {
+            console.log("Done")
+        }, 1000);
+    }
+
+    delayedMessage();
+}
