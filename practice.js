@@ -3110,9 +3110,9 @@ TASK 26 (Functions + Closures)
 
     const increment = counter();
 
-    console.log(increment()); // 1
-    console.log(increment()); // 2
-    console.log(increment()); // 3
+    console.log(increment()); 
+    console.log(increment()); 
+    console.log(increment()); 
 }
 
 /* ==================================================
@@ -3123,6 +3123,21 @@ TASK 27 (Async + Promise)
 - Use async/await to call it
 ================================================== */
 
+{
+    function wait(){
+        return new Promise((resolve, reject) => {
+            setTimeout(() => {
+                resolve("Done waiting")
+            }, 1000);
+        })
+    }
+
+    async function call(){
+        console.log(await wait());
+    }
+
+    call();
+}
 
 /* ==================================================
 TASK 28 (Error Handling)
@@ -3132,7 +3147,29 @@ TASK 28 (Error Handling)
 ================================================== */
 
 {
+    function wait(time) {
+        return new Promise((resolve, reject) => {
+            if (time < 0) {
+                reject("Time cannot be negative");
+                return;
+            }
 
+            setTimeout(() => {
+                resolve("Done waiting");
+            }, time);
+        });
+    }
+
+    async function call() {
+        try {
+            const message = await wait(1000);
+            console.log(message);
+        } catch (error) {
+            console.log("Error:", error);
+        }
+    }
+
+    call();
 }
 
 /* ==================================================
@@ -3144,7 +3181,16 @@ const prices = [100, 200, 300];
 - Calculate final total price
 ================================================== */
 
+{
+    const prices = [100, 200, 300];
 
+    const discountedTotal = prices.reduce((total, price) => {
+        const discountedPrice = price * 0.9;
+        return total + discountedPrice;
+    }, 0);
+
+    console.log(discountedTotal);
+}
 
 /* ==================================================
 TASK 30 (Thinking in React Style)
@@ -3157,3 +3203,15 @@ const users = [
 - Convert this into an array of strings like:
 ["1 - Aman", "2 - Riya"]
 ================================================== */
+
+{
+    const users = [
+        { id: 1, name: "Aman" },
+        { id: 2, name: "Riya" }
+    ];
+
+    const result = users.map(user => `${user.id} - ${user.name}`);
+
+    console.log(result);
+    // ["1 - Aman", "2 - Riya"]
+}
