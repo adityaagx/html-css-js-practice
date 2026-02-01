@@ -24,6 +24,96 @@ DOM - Document Object Model is a tree-like structure created by the browser that
 	  to manipulate the webpage dynamically.It lets JavaScript talk to HTML and change the page dynamically.
 Events - Events are actions performed by the user or browser that JavaScript can listen to and respond to.
 
+		  
+ARRAY METHODS SYNTAX CHEATSHEET
+map(), filter(), reduce()
+
+/* ==================================================
+MAP()
+- Transforms each element
+- Returns a NEW array
+- Same length as original array
+================================================== */
+
+// SHORT VERSION (most common)
+const newArray = array.map(element => transformedElement);
+
+
+// EXAMPLE
+{
+    const numbers = [1, 2, 3, 4, 5];
+
+    const doubled = numbers.map(num => num * 2);
+
+    console.log(doubled);
+    // [2, 4, 6, 8, 10]
+}
+
+/* ==================================================
+FILTER()
+- Selects elements based on condition
+- Returns a NEW array
+- Length can be smaller
+================================================== */
+
+// SHORT VERSION
+const filteredArrayShort = array.filter(element => condition);
+
+
+// EXAMPLE
+{
+    const numbers = [1, 2, 3, 4, 5];
+
+    const greaterThanThree = numbers.filter(num => num > 3);
+
+    console.log(greaterThanThree);
+    // [4, 5]
+}
+
+/* ==================================================
+REDUCE()
+- Combines all values into ONE value
+- Can return number, string, object, array
+================================================== */
+
+// SYNTAX
+const result = array.reduce((acc, item) => acc + item, initialValue);
+
+// EXAMPLE (SUM)
+{
+    const numbers = [1, 2, 3, 4, 5];
+
+    const sum = numbers.reduce((total, num) => {
+        return total + num;
+    }, 0);
+
+    console.log(sum);
+    // 15
+}
+
+
+
+/* ==================================================
+MAP + FILTER + REDUCE (REAL WORLD FLOW)
+================================================== */
+
+{
+    const employees = [
+        { name: "A", salary: 3000, active: true },
+        { name: "B", salary: 2000, active: false },
+        { name: "C", salary: 4000, active: true }
+    ];
+
+    const totalSalary = employees
+        .filter(employee => employee.active)
+        .map(employee => employee.salary)
+        .reduce((total, salary) => total + salary, 0);
+
+    console.log(totalSalary);
+    // 7000
+}
+
+
 /************************************
  JAVASCRIPT BUILT-IN OBJECTS CHEAT SHEET
 ************************************/
