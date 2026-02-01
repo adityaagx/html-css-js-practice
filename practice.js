@@ -3215,3 +3215,142 @@ const users = [
     console.log(result);
     // ["1 - Aman", "2 - Riya"]
 }
+
+/* ==================================================
+MAP TASKS (Beginner → Advanced)
+Do ALL tasks using map()
+================================================== */
+
+
+/* ==================================================
+TASK 1 (Beginner – Basic Transformation)
+Given an array of numbers:
+- Create a new array where each number is doubled
+================================================== */
+
+{
+    const numbers = [1, 2, 3, 4, 5];
+    // your code here
+}
+
+
+/* ==================================================
+TASK 2 (Beginner – String Transformation)
+Given an array of names:
+- Convert all names to uppercase
+================================================== */
+
+{
+    const names = ["aditya", "rahul", "sneha"];
+    // your code here
+}
+
+
+/* ==================================================
+TASK 3 (Beginner – Add Text)
+Given an array of fruits:
+- Create a new array like "I like apple"
+================================================== */
+
+{
+    const fruits = ["apple", "banana", "mango"];
+    // your code here
+}
+
+
+/* ==================================================
+TASK 4 (Beginner – Math Logic)
+Given an array of numbers:
+- Create a new array where each number is squared
+================================================== */
+
+{
+    const numbers = [2, 3, 4, 5];
+    // your code here
+}
+
+
+/* ==================================================
+TASK 5 (Intermediate – Array of Objects)
+Given this array:
+- Create a new array containing only the names
+================================================== */
+
+{
+    const users = [
+        { name: "Aman", age: 17 },
+        { name: "Riya", age: 22 },
+        { name: "Karan", age: 19 }
+    ];
+    // expected: ["Aman", "Riya", "Karan"]
+}
+
+
+/* ==================================================
+TASK 6 (Intermediate – Modify Object Shape)
+Given this array:
+- Create a new array of objects with only name and isAdult
+================================================== */
+
+{
+    const users = [
+        { name: "Aman", age: 17 },
+        { name: "Riya", age: 22 }
+    ];
+    // expected:
+    // [{ name: "Aman", isAdult: false }, { name: "Riya", isAdult: true }]
+}
+
+
+/* ==================================================
+TASK 7 (Intermediate – Index Usage)
+Given an array of items:
+- Create a new array like "1. item"
+================================================== */
+
+{
+    const items = ["Pen", "Book", "Laptop"];
+    // expected: ["1. Pen", "2. Book", "3. Laptop"]
+}
+
+
+/* ==================================================
+TASK 8 (Advanced – Nested Data)
+Given an array of users:
+- Create a new array of strings: "Aman (22)"
+================================================== */
+
+{
+    const users = [
+        { name: "Aman", profile: { age: 22 } },
+        { name: "Riya", profile: { age: 19 } }
+    ];
+    // your code here
+}
+
+
+/* ==================================================
+TASK 9 (Advanced – Map + Logic)
+Given an array of prices:
+- Apply 20% discount to each price
+================================================== */
+
+{
+    const prices = [100, 200, 300];
+    // expected: [80, 160, 240]
+}
+
+
+/* ==================================================
+TASK 10 (Advanced – React Style Thinking ⭐)
+Given an array of users:
+- Convert into display strings
+================================================== */
+
+{
+    const users = [
+        { id: 1, name: "Aman" },
+        { id: 2, name: "Riya" }
+    ];
+    // expected: ["1 - Aman", "2 - Riya"]
+}
