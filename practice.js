@@ -3050,6 +3050,20 @@ const employees = [
 - Calculate total salary
 ================================================== */
 
+{
+    const employees = [
+      { name: "A", salary: 3000, active: true },
+      { name: "B", salary: 2000, active: false },
+      { name: "C", salary: 4000, active: true }
+    ];
+
+    const totalSalary = employees
+        .filter(employee => employee.active)
+        .map(employee => employee.salary)
+        .reduce((total, salary) => total + salary, 0);
+
+    console.log(totalSalary);
+}
 
 
 /* ==================================================
@@ -3061,8 +3075,21 @@ const fruits = ["apple", "banana", "apple", "orange", "banana", "apple"];
 Expected output:
 { apple: 3, banana: 2, orange: 1 }
 ================================================== */
+/* ==================================================
+TASK 25 (Reduce - Frequency Counter)
+================================================== */
 
+{
+    const fruits = ["apple", "banana", "apple", "orange", "banana", "apple"];
 
+    const counter = fruits.reduce((acc, fruit) => {
+        acc[fruit] = (acc[fruit] || 0) + 1;
+        return acc;
+    }, {});
+
+    console.log(counter);
+    // { apple: 3, banana: 2, orange: 1 }
+}
 
 /* ==================================================
 TASK 26 (Functions + Closures)
@@ -3071,7 +3098,22 @@ TASK 26 (Functions + Closures)
 - Each time the returned function is called, it increases count by 1
 ================================================== */
 
+{
+    function counter() {
+        let count = 0;
 
+        return function () {
+            count++;
+            return count;
+        };
+    }
+
+    const increment = counter();
+
+    console.log(increment()); // 1
+    console.log(increment()); // 2
+    console.log(increment()); // 3
+}
 
 /* ==================================================
 TASK 27 (Async + Promise)
@@ -3082,7 +3124,6 @@ TASK 27 (Async + Promise)
 ================================================== */
 
 
-
 /* ==================================================
 TASK 28 (Error Handling)
 - Modify TASK 27
@@ -3090,7 +3131,9 @@ TASK 28 (Error Handling)
 - Handle error using try/catch
 ================================================== */
 
+{
 
+}
 
 /* ==================================================
 TASK 29 (Real-World Pattern)
