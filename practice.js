@@ -3311,7 +3311,7 @@ Given this array:
         name : user.name,
         isAdult : user.age >= 18
     }));
-    
+
     console.log(adult);
 }
 
@@ -3325,6 +3325,13 @@ Given an array of items:
 {
     const items = ["Pen", "Book", "Laptop"];
     // expected: ["1. Pen", "2. Book", "3. Laptop"]
+    
+    const newArray = items.map((item, index) => {
+    return `${index + 1}. ${item}`;
+    });
+
+
+    console.log(newArray);
 }
 
 
@@ -3339,7 +3346,10 @@ Given an array of users:
         { name: "Aman", profile: { age: 22 } },
         { name: "Riya", profile: { age: 19 } }
     ];
-    // your code here
+    
+    const newArray = users.map(user => `${user.name} (${user.profile.age})`);
+
+    console.log(newArray);
 }
 
 
@@ -3351,9 +3361,11 @@ Given an array of prices:
 
 {
     const prices = [100, 200, 300];
-    // expected: [80, 160, 240]
-}
 
+    const discountedPrice = prices.map(price => price * 0.8);
+
+    console.log(discountedPrice);
+}
 
 /* ==================================================
 TASK 10 (Advanced – React Style Thinking ⭐)
@@ -3367,4 +3379,9 @@ Given an array of users:
         { id: 2, name: "Riya" }
     ];
     // expected: ["1 - Aman", "2 - Riya"]
+
+    const newString = users.map(user => `${user.id} - ${user.name}`);
+
+    console.log(newString);
 }
+
