@@ -3230,9 +3230,11 @@ Given an array of numbers:
 
 {
     const numbers = [1, 2, 3, 4, 5];
-    // your code here
-}
 
+    const doubled = numbers.map(num => num * 2);
+
+    console.log(doubled);
+}
 
 /* ==================================================
 TASK 2 (Beginner – String Transformation)
@@ -3242,9 +3244,11 @@ Given an array of names:
 
 {
     const names = ["aditya", "rahul", "sneha"];
-    // your code here
-}
+    
+    const upperCase = names.map(name => name.toUpperCase());
 
+    console.log(upperCase);
+}
 
 /* ==================================================
 TASK 3 (Beginner – Add Text)
@@ -3254,9 +3258,11 @@ Given an array of fruits:
 
 {
     const fruits = ["apple", "banana", "mango"];
-    // your code here
-}
+    
+    const like = fruits.map(fruit => `I like ${fruit}`);
 
+    console.log(like);
+}
 
 /* ==================================================
 TASK 4 (Beginner – Math Logic)
