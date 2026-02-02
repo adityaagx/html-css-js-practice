@@ -3272,9 +3272,11 @@ Given an array of numbers:
 
 {
     const numbers = [2, 3, 4, 5];
-    // your code here
-}
+    
+    const squared = numbers.map(num => num * num);
 
+    console.log(squared);
+}
 
 /* ==================================================
 TASK 5 (Intermediate – Array of Objects)
@@ -3288,9 +3290,10 @@ Given this array:
         { name: "Riya", age: 22 },
         { name: "Karan", age: 19 }
     ];
-    // expected: ["Aman", "Riya", "Karan"]
+    
+    const names = users.map(user => user.name);
+    console.log(names);
 }
-
 
 /* ==================================================
 TASK 6 (Intermediate – Modify Object Shape)
@@ -3303,8 +3306,13 @@ Given this array:
         { name: "Aman", age: 17 },
         { name: "Riya", age: 22 }
     ];
-    // expected:
-    // [{ name: "Aman", isAdult: false }, { name: "Riya", isAdult: true }]
+
+    const adult = users.map(user => ({
+        name : user.name,
+        isAdult : user.age >= 18
+    }));
+    
+    console.log(adult);
 }
 
 
