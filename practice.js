@@ -3385,3 +3385,93 @@ Given an array of users:
     console.log(newString);
 }
 
+/* ==================================================
+ADVANCED MAP PRACTICE — TASKS ONLY
+================================================== */
+
+
+/* ==================================================
+TASK 11 (Advanced – Conditional Logic)
+Given an array of numbers:
+- If number is even → multiply by 2
+- If number is odd → multiply by 3
+================================================== */
+
+{
+    const numbers = [1, 2, 3, 4, 5];
+
+    // write code here
+}
+
+
+/* ==================================================
+TASK 12 (Advanced – Missing Data Handling)
+Given an array of users:
+- Create an array of strings like:
+"Aman (Age: 22)"
+- If age is missing, show:
+"Name (Age: Unknown)"
+================================================== */
+
+{
+    const users = [
+        { name: "Aman", age: 22 },
+        { name: "Riya" },
+        { name: "Karan", age: 19 }
+    ];
+
+    // write code here
+}
+
+
+/* ==================================================
+TASK 13 (Advanced – Nested Objects)
+Given API-like response data:
+- Extract id, name, and city into new objects
+================================================== */
+
+{
+    const response = [
+        { id: 1, user: { name: "Aman", address: { city: "Delhi" } } },
+        { id: 2, user: { name: "Riya", address: { city: "Mumbai" } } }
+    ];
+
+    // write code here
+}
+
+
+/* ==================================================
+TASK 14 (Advanced – map + index)
+Given an array of scores:
+- Create ranking strings like:
+"Rank 1: 95 points"
+================================================== */
+
+{
+    const scores = [95, 88, 76, 100];
+
+    // write code here
+}
+
+
+/* ==================================================
+TASK 15 (Advanced – React-Style Data Preparation ⭐)
+Given an array of products:
+- Convert into objects like:
+{
+  id,
+  label: "Phone - ₹1200",
+  isExpensive: true/false
+}
+================================================== */
+
+{
+    const products = [
+        { id: 1, name: "Phone", price: 1200 },
+        { id: 2, name: "Laptop", price: 2500 },
+        { id: 3, name: "Mouse", price: 400 }
+    ];
+
+    // write code here
+}
+
