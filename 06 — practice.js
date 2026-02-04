@@ -3400,7 +3400,15 @@ Given an array of numbers:
 {
     const numbers = [1, 2, 3, 4, 5];
 
-    // write code here
+    const newArray = numbers.map(num => {
+        if(num%2 === 0){
+           return num * 2
+        } else {
+            return num * 3
+        }
+    });
+
+    console.log(newArray);
 }
 
 
@@ -3420,23 +3428,30 @@ Given an array of users:
         { name: "Karan", age: 19 }
     ];
 
-    // write code here
-}
+    const newArray = users.map(user => 
+        `"${user.name} (${user.age ?? "Unknown"})"`)
 
+    console.log(newArray);
+}
 
 /* ==================================================
 TASK 13 (Advanced – Nested Objects)
 Given API-like response data:
 - Extract id, name, and city into new objects
 ================================================== */
-
 {
     const response = [
         { id: 1, user: { name: "Aman", address: { city: "Delhi" } } },
         { id: 2, user: { name: "Riya", address: { city: "Mumbai" } } }
     ];
 
-    // write code here
+    const newArray = response.map(item => ({
+        id: item.id,
+        name: item.user.name,
+        city: item.user.address.city
+    }));
+
+    console.log(newArray);
 }
 
 
@@ -3450,7 +3465,10 @@ Given an array of scores:
 {
     const scores = [95, 88, 76, 100];
 
-    // write code here
+    const newArray = scores.map((score, index) => 
+        `"Rank ${index + 1}: ${score} points"`);
+
+    console.log(newArray);
 }
 
 
@@ -3472,6 +3490,12 @@ Given an array of products:
         { id: 3, name: "Mouse", price: 400 }
     ];
 
-    // write code here
+    const newArray = products.map(product => ({
+        id: product.id,
+        label: `${product.name} - ₹${product.price}`,
+        isExpensive: product.price > 1000
+    }));
+
+    console.log(newArray);
 }
 
