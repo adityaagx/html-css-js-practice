@@ -3499,3 +3499,320 @@ Given an array of products:
     console.log(newArray);
 }
 
+/* ==================================================
+TASK 16 (Date & Formatting)
+Given an array of timestamps (milliseconds):
+- Convert each timestamp into a readable date string
+- Format: "YYYY-MM-DD"
+================================================== */
+
+{
+    const timestamps = [
+        1704067200000,
+        1704153600000,
+        1704240000000
+    ];
+
+    const newArray = timestamps.map(ts =>
+        new Date(ts).toISOString().split("T")[0]
+    );
+
+    console.log(newArray);
+}
+
+
+/* ==================================================
+TASK 17 (Boolean Mapping)
+Given an array of numbers:
+- Convert each number into a boolean
+- true if number > 0, false otherwise
+================================================== */
+
+{
+    const numbers = [-2, 0, 5, 10, -1];
+
+    const newArray = numbers.map(num => {
+        if(num > 0){
+            return true
+        } else {
+            return false
+        }
+    });
+
+    console.log(newArray);
+}
+
+
+/* ==================================================
+TASK 18 (Data Normalization)
+Given user input strings:
+- Trim whitespace
+- Convert to lowercase
+================================================== */
+
+{
+    const inputs = ["  Hello ", " WORLD", " JavaScript  "];
+
+    const newArray = inputs.map(input =>
+        input.trim().toLowerCase()
+    );
+
+    console.log(newArray);
+}
+
+
+/* ==================================================
+TASK 19 (Map + String Parsing)
+Given an array of price strings:
+- Extract numeric value
+- Convert to numbers
+================================================== */
+
+{
+    const prices = ["₹100", "$250", "€300"];
+
+    const newArray = prices.map(price =>
+        Number(price.replace(/[^\d]/g, ""))
+    );
+
+    console.log(newArray);
+}
+
+
+/* ==================================================
+TASK 20 (Map for UI State – React Thinking ⭐)
+Given an array of notifications:
+- Create objects with:
+{
+  message,
+  isUnread: true
+}
+================================================== */
+
+{
+    const notifications = [
+        "New message received",
+        "Payment successful",
+        "Update available"
+    ];
+
+    const newArray = notifications.map(notification => ({
+        message: notification,
+        isUnread: true
+    }));
+
+    console.log(newArray);
+}
+
+/* ==================================================
+MAP PRACTICE — TOTALLY DIFFERENT TASKS
+================================================== */
+
+
+/* ==================================================
+TASK 21 (Character-Level Mapping)
+Given an array of words:
+- Convert each word into the number of characters it has
+================================================== */
+
+{
+    const words = ["react", "javascript", "ui", "frontend"];
+
+    const newArray = words.map(word => word.length);
+
+    console.log(newArray);
+}
+
+
+/* ==================================================
+TASK 22 (Map Over Object Keys)
+Given an object:
+- Convert it into an array of strings like:
+"key: value"
+================================================== */
+
+{
+    const config = {
+        theme: "dark",
+        layout: "grid",
+        animations: true
+    };
+
+    const newArray = Object.entries(config).map(
+        ([key, value]) => `${key}: ${value}`
+    );
+
+    console.log(newArray);
+}
+
+
+/* ==================================================
+TASK 23 (Map + Math Formula)
+Given an array of temperatures in Celsius:
+- Convert them to Fahrenheit
+Formula: (C × 9/5) + 32
+================================================== */
+
+{
+    const celsiusTemps = [0, 20, 30, 37];
+
+    const newArray = celsiusTemps.map(temp => (temp * 9/5) + 32);
+
+    console.log(newArray);
+}
+
+
+/* ==================================================
+TASK 24 (Map for UI Icons)
+Given an array of status values:
+- Convert them into objects like:
+{
+  status,
+  icon
+}
+Rules:
+- "success" → "✅"
+- "error" → "❌"
+- "loading" → "⏳"
+================================================== */
+
+{
+    const statuses = ["success", "error", "loading"];
+
+    const newArray = statuses.map(status => ({
+        status,
+        icon:
+             status === "success" ? "✅" :
+             status === "error" ? "❌" :
+             "⏳"
+    }));
+
+    console.log(newArray);
+}
+
+
+/* ==================================================
+TASK 25 (Map + Data Enrichment)
+Given an array of users:
+- Add a new property `username`
+- username = first letter of name + age
+================================================== */
+
+{
+    const users = [
+        { name: "Aman", age: 22 },
+        { name: "Riya", age: 19 },
+        { name: "Karan", age: 25 }
+    ];
+
+    const newArray = users.map(user => ({
+        ...user,
+        username: user.name[0].toLowerCase() + user.age
+    }));
+
+    console.log(newArray);
+}
+
+/* ==================================================
+MAP PRACTICE — MORE NEW TASKS
+================================================== */
+
+
+/* ==================================================
+TASK 26 (Map + String Split)
+Given an array of full names:
+- Convert each into initials
+Example:
+"Aditya Agarwal" → "A.A"
+================================================== */
+
+{
+    const names = [
+        "Aditya Agarwal",
+        "Riya Sharma",
+        "Karan Mehta"
+    ];
+
+    const newArray = names.map(name => {
+        const parts = name.split(" ");
+        return [`${parts[0][0]}.${parts[1][0]}`];
+    });
+
+    console.log(newArray);
+}
+
+
+/* ==================================================
+TASK 27 (Map + Rounding Logic)
+Given an array of decimal numbers:
+- Round each number to 2 decimal places
+================================================== */
+
+{
+    const values = [1.2345, 2.6789, 3.14159];
+
+    const newArray = values.map(value => 
+        Number(value.toFixed(2)));
+
+    console.log(newArray);
+}
+
+
+/* ==================================================
+TASK 28 (Map + Conditional Text)
+Given an array of scores:
+- Convert into strings like:
+"Pass" if score >= 40
+"Fail" otherwise
+================================================== */
+
+{
+    const scores = [35, 50, 70, 20];
+
+    const newArray = scores.map(score => 
+        score >= 40 ? "Pass" : "Fail");
+
+    console.log(newArray);
+}
+
+
+/* ==================================================
+TASK 29 (Map + URL Generation)
+Given an array of product IDs:
+- Generate product URLs
+Example:
+id = 5 → "/product/5"
+================================================== */
+
+{
+    const productIds = [101, 102, 103];
+
+    const newArray = productIds.map(id => 
+        `/product/${id}`
+    );
+
+    console.log(newArray);
+}
+
+
+/* ==================================================
+TASK 30 (Map + Nested Array Access ⭐)
+Given an array of orders:
+- Extract item names into a new array
+================================================== */
+
+{
+    const orders = [
+        { id: 1, items: ["Pen", "Book"] },
+        { id: 2, items: ["Laptop"] },
+        { id: 3, items: ["Mouse", "Keyboard"] }
+    ];
+
+    const newArray = orders
+    .map(order => order.items)
+    .flat()
+
+    console.log(newArray);
+}
+
+
