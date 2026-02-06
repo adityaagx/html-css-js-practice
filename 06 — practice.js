@@ -4106,6 +4106,108 @@ Given an array of transactions:
     console.log(newArray);
 }
 
+/* ==================================================
+FILTER PRACTICE — NEW TASKS
+================================================== */
+
+
+/* ==================================================
+TASK 16 (Filter + String Length Range)
+Given an array of passwords:
+- Keep only passwords with length between 6 and 12
+================================================== */
+
+{
+    const passwords = ["12345", "password123", "admin", "securePass1", "toolongpasswordhere"];
+
+    const newArray = passwords.filter(password => 
+        password.length > 6 && password.length < 12
+    );
+
+    console.log(newArray);
+}
+
+
+/* ==================================================
+TASK 17 (Filter + Case-Insensitive Match)
+Given an array of emails:
+- Keep only emails that belong to "gmail.com"
+- Case-insensitive
+================================================== */
+
+{
+    const emails = [
+        "user@gmail.com",
+        "admin@Yahoo.com",
+        "test@GMAIL.com",
+        "hello@outlook.com"
+    ];
+
+    const newArray = emails.filter(email => 
+        email.toLowerCase().includes("gmail.com")
+    );
+
+    console.log(newArray);
+}
+
+
+/* ==================================================
+TASK 18 (Filter + Number Validation)
+Given an array with mixed values:
+- Keep only valid numbers (remove NaN, strings, null, undefined)
+================================================== */
+
+{
+    const values = [10, "20", NaN, 30, null, undefined, 0, "hello"];
+
+    const newArray = values.filter(value =>
+        typeof value === "number" && ! Number.isNaN(value));
+
+    console.log(newArray);
+}
+
+
+/* ==================================================
+TASK 19 (Filter + Permission Logic ⭐)
+Given an array of users:
+- Keep only users who:
+  - are admins
+  - AND are not banned
+================================================== */
+
+{
+    const users = [
+        { name: "Aditya", role: "admin", banned: false },
+        { name: "Riya", role: "user", banned: false },
+        { name: "Karan", role: "admin", banned: true }
+    ];
+
+    const newArray = users.filter(user => 
+        user.role == "admin" && user.banned == false
+    );
+
+    console.log(newArray);
+}
+
+
+/* ==================================================
+TASK 20 (Filter + Duplicate Removal ⭐⭐)
+Given an array of numbers:
+- Remove duplicate values
+- Keep only unique numbers
+================================================== */
+
+{
+    const numbers = [1, 2, 2, 3, 4, 4, 5, 1];
+
+    const newArray = numbers.filter((number, index, array) =>
+    array.indexOf(number) === index
+    );
+
+    console.log(newArray);
+
+}
+
 
 
 
