@@ -4007,6 +4007,106 @@ Given an array of users:
     console.log(newArray);
 }
 
+/* ==================================================
+FILTER PRACTICE — EXTRA TASKS
+================================================== */
+
+
+/* ==================================================
+TASK 11 (Filter + Includes on Array)
+Given an array of tags:
+- Keep only tags that are in the allowed list
+================================================== */
+
+{
+    const tags = ["react", "vue", "angular", "svelte", "jquery"];
+    const allowed = ["react", "vue"];
+
+    const newArray = tags.filter(tag => allowed.includes(tag));
+
+    console.log(newArray);
+}
+
+
+/* ==================================================
+TASK 12 (Filter + String Prefix)
+Given an array of usernames:
+- Keep only usernames that start with "@"
+================================================== */
+
+{
+    const usernames = ["@aditya", "riya", "@karan", "admin", "@dev"];
+
+    const newArray = usernames.filter(username => username.startsWith("@"));
+
+    console.log(newArray);
+}
+
+
+/* ==================================================
+TASK 13 (Filter + Object Property Existence)
+Given an array of posts:
+- Keep only posts that have a `publishedAt` field
+================================================== */
+
+{
+    const posts = [
+        { title: "Post 1", publishedAt: "2025-01-10" },
+        { title: "Draft 1" },
+        { title: "Post 2", publishedAt: "2026-02-01" }
+    ];
+
+   const newArray = posts.filter(post => post.publishedAt);
+
+   console.log(newArray);
+}
+
+
+/* ==================================================
+TASK 14 (Filter + Nested Boolean)
+Given an array of users:
+- Keep only users who have verified email
+================================================== */
+
+{
+    const users = [
+        { name: "Aman", settings: { emailVerified: true } },
+        { name: "Riya", settings: { emailVerified: false } },
+        { name: "Karan", settings: { emailVerified: true } }
+    ];
+
+    const newArray = users.filter(user => 
+        user
+        .settings.emailVerified == true
+    );
+
+    console.log(newArray);
+}
+
+
+/* ==================================================
+TASK 15 (Advanced – Filter + Computed Logic ⭐)
+Given an array of transactions:
+- Keep only transactions where total amount > 1000
+- total = price * quantity
+================================================== */
+
+{
+    const transactions = [
+        { item: "Phone", price: 500, quantity: 3 },
+        { item: "Mouse", price: 400, quantity: 1 },
+        { item: "Laptop", price: 1200, quantity: 1 }
+    ];
+
+    const newArray = transactions.filter(transaction => {
+        const totalAmount = transaction.price * transaction.quantity
+        return totalAmount > 1000
+    });
+
+    console.log(newArray);
+}
+
+
 
 
 
