@@ -3815,4 +3815,198 @@ Given an array of orders:
     console.log(newArray);
 }
 
+/* ==================================================
+FILTER PRACTICE — FROM BEGINNER TO ADVANCED
+================================================== */
+
+
+/* ==================================================
+TASK 1 (Very Basic)
+Given an array of numbers:
+- Return only the numbers greater than 10
+================================================== */
+
+{
+    const numbers = [3, 12, 5, 18, 7, 25];
+
+    const newArray = numbers.filter(number => number>10);
+
+    console.log(newArray);
+}
+
+
+/* ==================================================
+TASK 2 (Even Numbers)
+Given an array of numbers:
+- Return only even numbers
+================================================== */
+
+{
+    const numbers = [1, 2, 3, 4, 5, 6, 7, 8];
+
+    const newArray = numbers.filter(number => number%2 === 0);
+
+    console.log(newArray);
+}
+
+
+/* ==================================================
+TASK 3 (Filter Strings by Length)
+Given an array of strings:
+- Keep only strings with length greater than 5
+================================================== */
+
+{
+    const words = ["apple", "banana", "cat", "elephant", "dog"];
+
+    const newArray = words.filter(word => word.length>5);
+
+    console.log(newArray);
+}
+
+
+/* ==================================================
+TASK 4 (Truthy Values)
+Given an array with mixed values:
+- Remove all falsy values
+================================================== */
+
+{
+    const values = [0, 1, "", "hello", null, undefined, true, false];
+
+    const newArray = values.filter(value => value);
+
+    console.log(newArray);
+}
+
+
+/* ==================================================
+TASK 5 (Objects + Condition)
+Given an array of users:
+- Keep only users who are above 18
+================================================== */
+
+{
+    const users = [
+        { name: "Aditya", age: 20 },
+        { name: "Riya", age: 16 },
+        { name: "Karan", age: 22 }
+    ];
+
+    const newArray = users.filter(user => user.age > 18);
+
+    console.log(newArray);
+}
+
+
+/* ==================================================
+TASK 6 (Search Filtering)
+Given an array of product names:
+- Keep only products that include the word "pro"
+================================================== */
+
+{
+    const products = [
+        "MacBook Pro",
+        "iPhone",
+        "GoPro Camera",
+        "Laptop Stand",
+        "AirPods Pro"
+    ];
+
+   const newArray = products.filter(product =>
+    product.toLowerCase().includes("pro")
+    );
+
+    console.log(newArray);
+}
+
+
+/* ==================================================
+TASK 7 (Range Filtering)
+Given an array of prices:
+- Keep prices between 500 and 2000 (inclusive)
+================================================== */
+
+{
+    const prices = [199, 499, 799, 1500, 2500, 3200];
+
+    const newArray = prices.filter(
+        price => price >= 500 && price <= 2000
+    );
+
+    console.log(newArray);
+}
+
+
+/* ==================================================
+TASK 8 (Nested Data)
+Given an array of orders:
+- Keep only orders that have more than 1 item
+================================================== */
+
+{
+    const orders = [
+        { id: 1, items: ["Pen"] },
+        { id: 2, items: ["Book", "Notebook"] },
+        { id: 3, items: ["Laptop", "Mouse", "Keyboard"] }
+    ];
+
+    const newArray = orders.filter(order => 
+        order.items.length > 1
+    )
+
+    console.log(newArray);
+}
+
+
+/* ==================================================
+TASK 9 (Filter + Date Logic ⭐)
+Given an array of events:
+- Keep only events that are in the future
+================================================== */
+
+{
+    const events = [
+        { name: "Exam", date: "2024-01-10" },
+        { name: "Interview", date: "2026-03-05" },
+        { name: "Conference", date: "2025-12-20" }
+    ];
+
+    const newArray = events.filter(event => 
+        new Date(event.date) > new Date()
+    );
+
+    console.log(newArray);
+}
+
+
+/* ==================================================
+TASK 10 (Advanced Logic ⭐⭐)
+Given an array of users:
+- Keep only users who:
+  - are active
+  - AND have logged in within last 30 days
+================================================== */
+
+{
+    const users = [
+        { name: "Aditya", active: true, lastLogin: "2026-01-20" },
+        { name: "Riya", active: false, lastLogin: "2026-01-15" },
+        { name: "Karan", active: true, lastLogin: "2025-11-10" }
+    ];
+
+    const newArray = users.filter(user => {
+    const lastLoginDate = new Date(user.lastLogin);
+    const now = new Date();
+    const diffInDays = (now - lastLoginDate) / (1000 * 60 * 60 * 24);
+
+    return user.active && diffInDays <= 30;
+    });
+
+    console.log(newArray);
+}
+
+
+
 
