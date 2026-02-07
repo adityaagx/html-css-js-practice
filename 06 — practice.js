@@ -4208,6 +4208,176 @@ Given an array of numbers:
 
 }
 
+/* ==================================================
+REDUCE PRACTICE — FROM BEGINNER TO ADVANCED
+================================================== */
+
+
+/* ==================================================
+TASK 1 (Beginner – Sum of Numbers)
+Given an array of numbers:
+- Calculate the total sum using reduce
+================================================== */
+
+{
+    const numbers = [1, 2, 3, 4, 5];
+
+    const totalSum = numbers.reduce((total, number) => {
+        return total + number
+    }, 0);
+
+    console.log(totalSum);
+}
+
+
+/* ==================================================
+TASK 2 (Beginner – Product of Numbers)
+Given an array of numbers:
+- Calculate the product of all numbers
+================================================== */
+
+{
+    const numbers = [2, 3, 4];
+
+    const productNumber = numbers.reduce((product, number) => product * number, 1);
+
+    console.log(productNumber);
+}
+
+
+/* ==================================================
+TASK 3 (Beginner – Find Maximum)
+Given an array of numbers:
+- Find the largest number using reduce
+================================================== */
+
+{
+    const numbers = [10, 45, 22, 99, 3];
+
+    const largestNumber = numbers.reduce((largest, number) => 
+        number > largest ? number : largest);
+
+    console.log(largestNumber);
+}
+
+
+/* ==================================================
+TASK 4 (Intermediate – Count Elements)
+Given an array of strings:
+- Count how many elements are in the array
+(use reduce, not length)
+================================================== */
+
+{
+    const fruits = ["apple", "banana", "mango", "orange"];
+
+    const newArray = fruits.reduce((element, fruit) => )
+}
+
+
+/* ==================================================
+TASK 5 (Intermediate – Frequency Counter)
+Given an array:
+- Count how many times each value appears
+Expected:
+{ apple: 2, banana: 1, orange: 1 }
+================================================== */
+
+{
+    const fruits = ["apple", "banana", "apple", "orange"];
+
+    // your code here
+}
+
+
+/* ==================================================
+TASK 6 (Intermediate – Sum of Object Values)
+Given an array of products:
+- Calculate total price
+================================================== */
+
+{
+    const products = [
+        { name: "Pen", price: 10 },
+        { name: "Book", price: 50 },
+        { name: "Bag", price: 100 }
+    ];
+
+    const
+}
+
+
+/* ==================================================
+TASK 7 (Intermediate – Group by Property)
+Given an array of users:
+- Group users by role
+Expected:
+{
+  admin: [...],
+  user: [...]
+}
+================================================== */
+
+{
+    const users = [
+        { name: "Aditya", role: "admin" },
+        { name: "Riya", role: "user" },
+        { name: "Karan", role: "admin" }
+    ];
+
+    // your code here
+}
+
+
+/* ==================================================
+TASK 8 (Advanced – Flatten Array)
+Given a nested array:
+- Convert into a single flat array
+================================================== */
+
+{
+    const arrays = [[1, 2], [3, 4], [5]];
+
+    // your code here
+}
+
+
+/* ==================================================
+TASK 9 (Advanced – Cart Total ⭐)
+Given a shopping cart:
+- total = price * quantity
+- Calculate final amount
+================================================== */
+
+{
+    const cart = [
+        { item: "Phone", price: 500, quantity: 2 },
+        { item: "Mouse", price: 400, quantity: 1 }
+    ];
+
+    // your code here
+}
+
+
+/* ==================================================
+TASK 10 (Advanced – map + filter + reduce ⭐⭐)
+Given an array of users:
+- Keep only active users
+- Get their ages
+- Calculate average age
+================================================== */
+
+{
+    const users = [
+        { name: "Aman", age: 20, active: true },
+        { name: "Riya", age: 17, active: false },
+        { name: "Karan", age: 25, active: true }
+    ];
+
+    // your code here
+}
+
+
 
 
 
