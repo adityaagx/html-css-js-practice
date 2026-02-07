@@ -4271,7 +4271,10 @@ Given an array of strings:
 {
     const fruits = ["apple", "banana", "mango", "orange"];
 
-    const newArray = fruits.reduce((element, fruit) => )
+    const newArray = fruits.reduce((total, fruit) => 
+     total + 1, 0);
+
+    console.log(newArray);
 }
 
 
@@ -4286,7 +4289,12 @@ Expected:
 {
     const fruits = ["apple", "banana", "apple", "orange"];
 
-    // your code here
+    const frequency = fruits.reduce((acc, fruit) => {
+        acc[fruit] = (acc[fruit] || 0) + 1;
+        return acc;
+    }, {});
+
+    console.log(frequency);
 }
 
 
@@ -4303,7 +4311,10 @@ Given an array of products:
         { name: "Bag", price: 100 }
     ];
 
-    const
+    const totalPrice = products.reduce((total, product) =>
+        total + product.price, 0);
+
+    console.log(totalPrice);
 }
 
 
